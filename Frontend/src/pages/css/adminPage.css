@@ -1,12 +1,14 @@
 html,
 body {
   height: 100%;
+  font-size:0.8vw;
 }
 
 .header{
     position: relative;    
     margin: 0;
 }
+
 .logo{
     width: 100%; 
     top: 0.5rem;

@@ -1,4 +1,4 @@
-import Aparments from '../components/Apartments';
+import Apartments from '../components/Apartments';
 import '../css/adminPage.css';
 
 const exampleList = [
@@ -45,15 +45,15 @@ let i=0;
 while(i<exampleList.length){
     let pushed = "";
     if(i+1<exampleList.length && i+2<exampleList.length){
-        pushed = <tr><td>{<Aparments/>}</td><td>{<Aparments/>}</td><td>{<Aparments/>}</td></tr>;
+        pushed = <tr><td>{<Apartments apartmentObj={exampleList[i]}/>}</td><td>{<Apartments apartmentObj={exampleList[i+1]}/>}</td><td>{<Apartments apartmentObj={exampleList[i+2]}/>}</td></tr>;
         i = i+3;
     }
     else if(i+1<exampleList.length && i+2>=exampleList.length){
-        pushed = <tr><td>{<Aparments/>}</td><td>{<Aparments/>}</td><td></td></tr>;
+        pushed = <tr><td>{<Apartments apartmentObj={exampleList[i]}/>}</td><td>{<Apartments apartmentObj={exampleList[i+1]}/>}</td><td></td></tr>;
         i = i+2;
     }
     else{
-        pushed = <tr><td>{<Aparments/>}</td><td></td><td></td></tr>
+        pushed = <tr><td>{<Apartments apartmentObj={exampleList[i]}/>}</td><td></td><td></td></tr>
         i = i+1;
     }
     apartments.push(pushed);
