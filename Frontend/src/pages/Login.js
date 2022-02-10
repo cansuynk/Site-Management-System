@@ -8,17 +8,18 @@ function Login() {
 <div className="container-fluid" id='containerId'>
     
         <div className="col-lg-8" id="col1">
+            <div className='logoGroup'>
+
             <div className='logo center'>
             <img className="mb-4" src={logo} alt="logo"/>
             </div>
-
 
             <div class="card-group center">
             <div class="card col-md-6 cards">
                 <FontAwesomeIcon id= "icon" icon={faHomeLg}/>
                 <div class="card-body">
                 <h4 class="card-title">Site/Apartment Manager</h4>
-                <p class="card-text text-muted">Create apartments, edit information, assign residents, <br/> generate invoices, view payment information, <br/> read messages</p>
+                <p class="card-text text-muted">Create apartments, edit information, assign residents, generate invoices, view payment information, read messages</p>
                 </div>
                 <div class="card-footer">
                 </div>
@@ -27,10 +28,11 @@ function Login() {
                 <FontAwesomeIcon id= "icon"  icon={faHomeUser} />
                 <div class="card-body">
                 <h4 class="card-title">Resident</h4>
-                <p class="card-text text-muted">View apartment information, <br/> view & pay invoices and dues,<br/> send a message to the manager</p>
+                <p class="card-text text-muted">View apartment information, view & pay invoices and dues, send a message to the manager</p>
                 </div>
                 <div class="card-footer">
                 </div>
+            </div>
             </div>
             </div>
         

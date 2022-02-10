@@ -15,12 +15,14 @@ h1{
 #col1{
     
     height:100%;
+
 }
 
 #col2{
     background-color: rgb(0, 175, 239);
     height:100%;
     color: white;
+    
 
 }
 .center{
@@ -29,14 +31,19 @@ h1{
     align-items: center;
 }
 
+.signin{
+    position: relative;
+    width: 40rem;
+}
+
 .form-signin {
-  width: 50rem;
+  
   margin: auto;
 }
 
 .form-floating{
-    margin: 5rem 0 0 0;
-    font-size: 20px;
+    margin: 10% 0 0 0;
+    font-size: 2rem;
 }
 
 .form-signin .form-control{
@@ -58,25 +65,31 @@ h1{
     background-color: rgb(2, 57, 77);
 }
 
+.logoGroup{
+    margin-top: 5em;
+    position: relative;
+}
+
 .card-group{
     text-align: center;
     align-items: center;
 }
 
 .cards{
-    margin: 2rem 6rem 0 6rem;
+    margin: 0 6rem 0 6rem;
     border-radius: 1rem;
     padding: 5rem 0 5rem 0;
-    font-size: 16px;
+    font-size: 1.5rem;
     width: 35%;
+    height: 35%;
 }
 
 .cards:hover{
-    border-width: 1rem;
+    border-width: 0.5rem;
 }
 
 .logo{
-    margin: 15rem 0 10rem 0;
+    margin: 0 0 8rem 0;
 }
 
 #icon{

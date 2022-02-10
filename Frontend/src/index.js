@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Login from './pages/Login';
 import reportWebVitals from './reportWebVitals';
+import Login from './pages/Login';
+import AdminPage from './pages/AdminPage';
 
 
 let open = true;
 ReactDOM.render(
   <React.StrictMode>
-    {!open? <App /> : <Login />}
+    {!open? <App /> : <AdminPage />}
   </React.StrictMode>,
   document.getElementById('root')
 );
