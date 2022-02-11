@@ -65,13 +65,12 @@ while(i<exampleList.length){
 function ListApartments() {
     return (
         
-         <div class="table-responsive">
-  <table class="table align-middle">
-    
-    <tbody>
-        {apartments}
-    </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <tbody>
+                {apartments}
+            </tbody>
+        </table>
     </div>
     );
   }

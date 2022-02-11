@@ -1,3 +1,4 @@
+import Residents from '../components/Residents';
 import '../css/adminPage.css';
 
 const exampleList = [
@@ -35,40 +36,39 @@ const exampleList = [
     }
 ];
 
+
+let residents = [];
+let i=0;
+if(exampleList.length === 0){
+    residents.push(<h2 className='center'>There is not any residents.</h2>);
+}
+while(i<exampleList.length){
+    let pushed = "";
+    if(i+1<exampleList.length && i+2<exampleList.length){
+        pushed = <tr><td>{<Residents residentObj={exampleList[i]}/>}</td><td>{<Residents residentObj={exampleList[i+1]}/>}</td><td>{<Residents residentObj={exampleList[i+2]}/>}</td></tr>;
+        i = i+3;
+    }
+    else if(i+1<exampleList.length && i+2>=exampleList.length){
+        pushed = <tr><td>{<Residents residentObj={exampleList[i]}/>}</td><td>{<Residents residentObj={exampleList[i+1]}/>}</td><td></td></tr>;
+        i = i+2;
+    }
+    else{
+        pushed = <tr><td>{<Residents residentObj={exampleList[i]}/>}</td><td></td><td></td></tr>
+        i = i+1;
+    }
+    residents.push(pushed);
+}
+
 function ListResidents() {
     return (
         
-        <div>
-        <h3 className="center">All residents are listed below</h3>
-        <br/>
-
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Surname</th>
-                <th scope="col">TC No</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Vehicle Number plate</th>
-                </tr>
-            </thead>
+        <div class="table-responsive">
+        <table class="table align-middle">
             <tbody>
-                {exampleList.map((o,index) => 
-                <tr>
-                <th scope="row">{index+1}</th>
-                <td>{o.name}</td>
-                <td>{o.surname}</td>
-                <td>{o.tcNo}</td>
-                <td>{o.email}</td>
-                <td>{o.phone}</td>
-                <td>{o.numberPlate}</td>
-                </tr>
-                )}
-        </tbody>
+                {residents}
+            </tbody>
         </table>
-        </div>
+    </div>
     );
   }
   
