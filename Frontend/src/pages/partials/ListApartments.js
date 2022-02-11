@@ -42,6 +42,9 @@ const exampleList = [
 
 let apartments = [];
 let i=0;
+if(exampleList.length === 0){
+    apartments.push(<h2 className='center'>There is not any apartments.</h2>);
+}
 while(i<exampleList.length){
     let pushed = "";
     if(i+1<exampleList.length && i+2<exampleList.length){

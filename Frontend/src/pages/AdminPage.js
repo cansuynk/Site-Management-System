@@ -4,6 +4,7 @@ import AdminMenu from './partials/AdminMenu';
 import ListApartments from './partials/ListApartments';
 import React, { useState } from 'react';
 import ListInvoicesDues from './partials/ListInvoicesDues';
+import ListMessages from './partials/ListMessages';
 
 
 
@@ -46,7 +47,7 @@ function AdminPage() {
     <div className="col-lg-10" id="col2"> 
     {(page === "listApartments")?<ListApartments/>:
     (page === "listInvoicesDues")?<ListInvoicesDues/>:
-    (page === "listMessages")?"listMessages":
+    (page === "listMessages")?<ListMessages/>:
     (page === "addUpdateApartment")?"addUpdateApartment":
     (page === "addUpdateResident")?"addUpdateResident":
     (page === "addInvoiceDueInformation")?"addInvoiceDueInformation":null}

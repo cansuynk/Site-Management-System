@@ -5,7 +5,7 @@ body {
 }
 
 .header{
-    position: relative;    
+    
     margin: 0;
 }
 
@@ -18,12 +18,14 @@ body {
 #containerId{
     height:100%;
     margin: 0;
+    padding: 0;
 }
 
 #col1{
     background-color: rgb(0, 175, 239);
     color: white;
     height:100%;
+    margin-top:50px;
 
 }
 
@@ -31,6 +33,7 @@ body {
     height:100%;
     background-color: white;
     color: black;
+    margin-top:100px;
 }
 
 
@@ -72,4 +75,8 @@ a:link:visited:hover:active{
 .item:hover{
     background-color: rgb(206, 197, 197);
     text-decoration: none;
+}
+
+.rowNew{
+    background-color: rgb(170, 247, 215);
 }
