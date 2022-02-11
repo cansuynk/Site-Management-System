@@ -40,7 +40,7 @@ function AddUpdateApartment() {
         </div>
 
         <div class="form-outline mb-4 input-group-lg">
-            <label class="form-label" for="form6Example3">No</label>
+            <label class="form-label" for="form6Example3">Apartment No</label>
             <input type="number" id="form6Example3" class="form-control" />
         </div>
         
@@ -60,7 +60,7 @@ function AddUpdateApartment() {
 
         <div class="form-outline mb-4 input-group-lg">
             <label class="form-label" for="form6Example3">Resident Name Surname</label>
-            <input type="text" id="form6Example3" class="form-control" />
+            <input type="text" id="form6Example3" class="form-control" placeHolder="Name Surname" />
         </div>
 
         <br/>

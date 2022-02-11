@@ -95,3 +95,7 @@ a:link:visited:hover:active{
     padding: 5rem 15rem 5rem 15rem;
     font-size: 20px;
 }
+
+.card-text{
+    text-align: left;
+}
