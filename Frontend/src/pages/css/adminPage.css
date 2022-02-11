@@ -26,6 +26,11 @@ body {
     color: white;
     height:100%;
     margin-top:50px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
 
 }
 
@@ -34,6 +39,11 @@ body {
     background-color: white;
     color: black;
     margin-top:100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
 }
 
 
@@ -79,4 +89,9 @@ a:link:visited:hover:active{
 
 .rowNew{
     background-color: rgb(170, 247, 215);
+}
+
+.formDiv{
+    padding: 5rem 15rem 5rem 15rem;
+    font-size: 20px;
 }

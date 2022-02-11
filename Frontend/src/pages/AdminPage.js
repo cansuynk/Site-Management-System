@@ -5,6 +5,7 @@ import ListApartments from './partials/ListApartments';
 import React, { useState } from 'react';
 import ListInvoicesDues from './partials/ListInvoicesDues';
 import ListMessages from './partials/ListMessages';
+import AddUpdateApartment from './partials/AddUpdateApartment';
 
 
 
@@ -40,7 +41,7 @@ function AdminPage() {
     </div>
   </nav>
 
-    <div className="col-lg-2 center" id="col1"> 
+    <div className="col-lg-2 position-fixed center" id="col1"> 
     {<AdminMenu parentCallback = {callbackFunction}/>}
     </div>
 
@@ -48,7 +49,7 @@ function AdminPage() {
     {(page === "listApartments")?<ListApartments/>:
     (page === "listInvoicesDues")?<ListInvoicesDues/>:
     (page === "listMessages")?<ListMessages/>:
-    (page === "addUpdateApartment")?"addUpdateApartment":
+    (page === "addUpdateApartment")?<AddUpdateApartment/>:
     (page === "addUpdateResident")?"addUpdateResident":
     (page === "addInvoiceDueInformation")?"addInvoiceDueInformation":null}
     </div>
