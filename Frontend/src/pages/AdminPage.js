@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import ListInvoicesDues from './partials/ListInvoicesDues';
 import ListMessages from './partials/ListMessages';
 import AddUpdateApartment from './partials/AddUpdateApartment';
+import ListResidents from './partials/ListResidents';
 
 
 
@@ -49,6 +50,7 @@ function AdminPage() {
     {(page === "listApartments")?<ListApartments/>:
     (page === "listInvoicesDues")?<ListInvoicesDues/>:
     (page === "listMessages")?<ListMessages/>:
+    (page === "listResidents")?<ListResidents/>:
     (page === "addUpdateApartment")?<AddUpdateApartment/>:
     (page === "addUpdateResident")?"addUpdateResident":
     (page === "addInvoiceDueInformation")?"addInvoiceDueInformation":null}

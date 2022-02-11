@@ -60,7 +60,8 @@ function ListMessages() {
     }
 
     return (
-        
+        <div>
+        <h3 className="center">All messages are listed below</h3>
         <table class="table">
             <thead>
                 <tr>
@@ -102,6 +103,7 @@ function ListMessages() {
                 )}
         </tbody>
         </table>
+        </div>
     );
   }
   

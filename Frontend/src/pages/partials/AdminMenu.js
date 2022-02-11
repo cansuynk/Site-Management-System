@@ -13,10 +13,13 @@ function AdminMenu(props) {
         <ul class="menu menuDiv">
             
             <a href="" value="list" onClick={(e) => handleClick(e,"listApartments")}><li class="menu-item item">List Apartments</li> </a>
+
+            <a href="" onClick={(e) => handleClick(e,"listMessages")}><li class="menu-item item">List Messages</li> </a>
             
             <a href="" onClick={(e) => handleClick(e,"listInvoicesDues")}><li class="menu-item item">List Invoices/Dues</li> </a>
             
-            <a href="" onClick={(e) => handleClick(e,"listMessages")}><li class="menu-item item">List Messages</li> </a>
+            <a href="" onClick={(e) => handleClick(e,"listResidents")}><li class="menu-item item">List Residents</li> </a>
+            
             
             <li class="divider"></li>
             <li class="divider"></li>

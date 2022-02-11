@@ -34,6 +34,8 @@ const exampleList = [
 function ListInvoicesDues() {
     return (
         
+        <div>
+        <h3 className="center">All debts are listed below</h3>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
@@ -56,6 +58,7 @@ function ListInvoicesDues() {
                 )}
         </tbody>
         </table>
+        </div>
     );
   }
   
