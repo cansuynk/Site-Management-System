@@ -67,7 +67,7 @@ function AddInvoiceDue() {
         <form className='formDiv'  onSubmit={handleSubmit}>
         <div className="container center">
         <div className="col-lg-6"> 
-            <div class="form-group groupOp">
+            <div class="form-group">
             <label class="form-label" for="form6Example3">Select the Apartment and Resident</label>
             
             <select class="form-select" multiple onChange={(e) => setValue1(e)}>
@@ -77,7 +77,7 @@ function AddInvoiceDue() {
         </div>
 
         <div className="col-lg-6"> 
-            <div class="form-group groupOp">
+            <div class="form-group">
             <label class="form-label" for="form6Example3">Select the Depth Type</label>
             
             <select class="form-select" multiple onChange={(e) => setValue2(e)}>

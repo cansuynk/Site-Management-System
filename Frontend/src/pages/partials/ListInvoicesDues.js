@@ -1,6 +1,6 @@
 
 
-const exampleList = [
+let exampleList = [
     {
         resident: "Cansu Yanık",
         block: "A",
@@ -35,6 +35,8 @@ const exampleList = [
     }
 ];
 
+exampleList = exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
+
 function ListInvoicesDues() {
     return (
         
@@ -63,7 +65,7 @@ function ListInvoicesDues() {
                     <div class="form-group">
                     <label class="form-checkbox">
                         <input type="checkbox" checked = {o.status===1?true:false}/>
-                        <i class="form-icon"></i>
+                        <i class="form-icon"></i>{o.status===1?"Paid":"Not Paid"}
                     </label>
                     </div>
                 </td>
