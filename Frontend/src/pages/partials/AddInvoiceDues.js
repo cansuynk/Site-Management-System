@@ -41,14 +41,19 @@ const exampleList = [
     }
 ];
 
+const months = ["January", "February", "March", "April", "May", "Jun", "July", "August", "September", "October", "November", "December"];
+const years = [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000];
 const depthTypes = ["Dues", "Electric", "Hot Water", "Gas", "Other"];
+
 let newList = exampleList.filter( (a) => a.resident!=="-");
 
 function AddInvoiceDue() {
 
     const [value1, setValue1] = useState(newList[0].resident);
     const [value2, setValue2] = useState("electric");
-    const [value3, setValue3] = useState("");
+    const [value3, setValue3] = useState("January");
+    const [value4, setValue4] = useState("");
+    const [value5, setValue5] = useState("");
 
 
     function handleSubmit(e){
@@ -56,6 +61,8 @@ function AddInvoiceDue() {
         console.log(value1.target.value);
         console.log(value2.target.value);
         console.log(value3.target.value);
+        console.log(value4.target.value);
+        console.log(value5.target.value);
         
     }
 
@@ -64,7 +71,7 @@ function AddInvoiceDue() {
         <div>
         <h2 className="center">Add new debts</h2>
         <br/> <br/>
-        <form className='formDiv'  onSubmit={handleSubmit}>
+        <form className=''  onSubmit={handleSubmit}>
         <div className="container center">
         <div className="col-lg-6"> 
             <div class="form-group">
@@ -88,15 +95,35 @@ function AddInvoiceDue() {
 
         </div>
         <div className="container center">
-        <div class="form-outline mb-4 input-group-lg">
+        <div className="col-lg-6"> 
+            <div class="form-outline mb-4 input-group-sm">
+            <label class="form-label" for="form6Example3">Select Month</label>
+            <select class="form-control" onChange={(e) => setValue3(e)}>
+            <option selected>Open this select menu</option>
+            {months.map((t) => <option>{t}</option>)}
+            </select>
+            </div>
+        </div>
+        <div className="col-lg-6"> 
+        <div class="form-outline mb-4 input-group-sm">
+            <label class="form-label" for="form6Example3">Select Year</label>
+            <select class="form-control" onChange={(e) => setValue4(e)}>
+            <option selected>Open this select menu</option>
+            {years.map((t) => <option>{t}</option>)}
+            </select>
+            </div>
+        </div>
+        </div>
+        <div className="container center">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Depth Amount (TL)</label>
-            <input type="number" id="form6Example3" class="form-control" placeHolder="TL" onChange={(e) => setValue3(e)}/>
+            <input type="number" id="form6Example3" class="form-control" placeHolder="TL" onChange={(e) => setValue5(e)}/>
         </div>
         </div>
 
         <br/>
         <div className="container center">
-        <button type="submit" value="Submit" class="btn-lg btn-primary btn-block">Submit</button>
+        <button type="submit" value="Submit" class="btn-sm btn-primary btn-block">Submit</button>
         </div>
         </form>
         </div>

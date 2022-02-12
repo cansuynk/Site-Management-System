@@ -5,12 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './pages/Login';
 import AdminPage from './pages/AdminPage';
+import UserPage from './pages/UserPage';
 
 
 let open = true;
 ReactDOM.render(
   <React.StrictMode>
-    {!open? <App /> : <AdminPage />}
+    {!open? <App /> : <UserPage/>}
   </React.StrictMode>,
   document.getElementById('root')
 );

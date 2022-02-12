@@ -15,7 +15,7 @@ function AddUpdateApartment() {
         <p className='center'>Add a new apartment or update existing apartment!</p>
         <form className='formDiv'>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
         <label class="form-label" for="form6Example3">Select Block</label>
         <select class="form-control">
         <option selected>Open this select menu</option>
@@ -23,7 +23,7 @@ function AddUpdateApartment() {
         </select>
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
         <label class="form-label" for="form6Example3">Select Apartment Type</label>
         <select class="form-control">
         <option selected>Open this select menu</option>
@@ -31,7 +31,7 @@ function AddUpdateApartment() {
         </select>
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
         <label class="form-label" for="form6Example3">Select Floor</label>
         <select class="form-control">
         <option selected>Open this select menu</option>
@@ -39,7 +39,7 @@ function AddUpdateApartment() {
         </select>
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Apartment No</label>
             <input type="number" id="form6Example3" class="form-control" />
         </div>
@@ -58,13 +58,13 @@ function AddUpdateApartment() {
         </label>
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Resident Name Surname</label>
             <input type="text" id="form6Example3" class="form-control" placeHolder="Name Surname" />
         </div>
 
         <br/>
-        <button type="submit" class="btn-lg btn-primary btn-block">Submit</button>
+        <button type="submit" class="btn-sm btn-primary btn-block">Submit</button>
         </form>
         </div>
     );

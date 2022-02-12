@@ -17,38 +17,38 @@ function AddUpdateResident() {
         <p className='center'>Add a resident or update existing resident!</p>
         <form className='formDiv'>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Name</label>
             <input type="text" id="form6Example3" class="form-control"  placeHolder="Name" />
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Surname</label>
             <input type="text" id="form6Example3" class="form-control"  placeHolder="Surname" />
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Tc Number</label>
             <input type="text" id="form6Example3" class="form-control"  placeHolder="Tc Number"/>
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Email</label>
             <input type="email" id="form6Example3" class="form-control"  placeHolder="jane.doe@example.com"/>
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Phone</label>
             <input type="phone" id="form6Example3" class="form-control"  placeHolder="05xxxxxxxxx"/>
         </div>
 
-        <div class="form-outline mb-4 input-group-lg">
+        <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Vehicle Number Plate</label>
             <input type="text" id="form6Example3" class="form-control"  placeHolder="Number Plate"/>
         </div>
 
         <br/>
-        <button type="submit" class="btn-lg btn-primary btn-block">Submit</button>
+        <button type="submit" class="btn-sm btn-primary btn-block">Submit</button>
         </form>
         </div>
     );

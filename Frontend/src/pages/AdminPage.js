@@ -24,19 +24,21 @@ function AdminPage() {
   return (
     <div className="container-fluid" id='containerId'>
     
-    <nav class="navbar navbar-inverse navbar-fixed-top header">
+    <nav class="navbar-inverse navbar-fixed-top header">
+    <div className='container-left'>
       <ul class="nav navbar-nav navbar-left">
       <li><a href="#"><img className="d-inline-block align-top logo" src={logo} alt="logo"/></a></li>
       </ul>
-      <ul></ul>
-      <ul class="nav navbar-nav navbar-left">
+      
+      <ul class="nav navbar-nav navbar-left mleft10">
         <li><a href="#">SiteMS</a></li>
       </ul>
+    </div>
     
-    <div class="container">   
+    <div class="container-right">   
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
+        <li class="no-padd"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"> Admin</a></li>

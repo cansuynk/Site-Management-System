@@ -7,6 +7,8 @@ let exampleList = [
         apartmentNo: "59",
         debtType: "electric",
         debt: "100",
+        month: 2,
+        year: 2022,
         status: 0     
     },
     {
@@ -15,6 +17,8 @@ let exampleList = [
         apartmentNo: "29",
         debtType: "due",
         debt: "200",
+        month: 2,
+        year: 2022,
         status: 1   
     },
     {
@@ -23,6 +27,8 @@ let exampleList = [
         apartmentNo: "59",
         debtType: "electric",
         debt: "100",
+        month: 3,
+        year: 2021,
         status: 0  
     },
     {
@@ -31,6 +37,8 @@ let exampleList = [
         apartmentNo: "59",
         debtType: "electric",
         debt: "100",
+        month: 2,
+        year: 2021,
         status: 1   
     }
 ];
@@ -50,6 +58,7 @@ function ListInvoicesDues() {
                 <th scope="col">Apartment</th>
                 <th scope="col">Debt Type</th>
                 <th scope="col">Debt (TL)</th>
+                <th scope="col">Time</th>
                 <th scope="col">Paid</th>
                 </tr>
             </thead>
@@ -61,6 +70,7 @@ function ListInvoicesDues() {
                 <td>{o.block}{o.apartmentNo}</td>
                 <td>{o.debtType}</td>
                 <td>{o.debt}</td>
+                <td>{o.month}/{o.year}</td>
                 <td>  
                     <div class="form-group">
                     <label class="form-checkbox">

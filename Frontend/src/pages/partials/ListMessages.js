@@ -80,7 +80,7 @@ function ListMessages() {
                 <td>{o.block}{o.apartmentNo}</td>
                 <td>{o.time}</td>
                 <td>
-                    <a className="btn btn-primary" href="#example-modal-2" onClick={(e) => openHandler(e,index)}>Open</a>
+                    <a className="btn-sm btn-primary btnOpen" href="#example-modal-2" onClick={(e) => openHandler(e,index)}>Open</a>
                     {!openM?
                     <div class="modal" id="example-modal-2">
                         <a href="#modals-sizes" class="modal-overlay" aria-label="Close" onClick={(e) => closeHandler(e,list)}></a>
