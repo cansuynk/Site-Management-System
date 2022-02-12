@@ -9,6 +9,7 @@ const exampleList = [
         apartmentNo:"59",
         tcNo: "1111111111111",
         email: "cansuyanik96@gmail.com",
+        password: "xxxxxxxx",
         phone: "05303003656",
         numberPlate: "06-CIY-680"
     },
@@ -19,6 +20,7 @@ const exampleList = [
         apartmentNo:"59",
         tcNo: "1111111111111",
         email: "emreburakozkan@gmail.com",
+        password: "xxxxxxxx",
         phone: "05416319137",
         numberPlate: "06-AEF-232"
     },
@@ -29,6 +31,7 @@ const exampleList = [
         apartmentNo:"59",
         tcNo: "1111111111111",
         email: "cansuyanik96@gmail.com",
+        password: "xxxxxxxx",
         phone: "05303003656",
         numberPlate: "06-CIY-680"
     },
@@ -39,6 +42,7 @@ const exampleList = [
         apartmentNo:"59",
         tcNo: "1111111111111",
         email: "emreburakozkan@gmail.com",
+        password: "xxxxxxxx",
         phone: "05416319137",
         numberPlate: "06-AEF-232"
     }

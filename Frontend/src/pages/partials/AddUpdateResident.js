@@ -3,6 +3,10 @@ import '../css/adminPage.css';
 
 
 function AddUpdateResident() {
+
+    //if existing resident(check name: change)
+    //else cretae password
+
     return (
         <div>
         <div className='center'>

@@ -11,6 +11,7 @@ function Residents(props) {
         <p class="card-text">
         <strong>TC NO:</strong> {props.residentObj.tcNo} <br/>
         <strong>Email:</strong> {props.residentObj.email} <br/>
+        <strong>Generated Password:</strong> {props.residentObj.password} <br/>
         <strong>Phone:</strong> {props.residentObj.phone} <br/>
         <strong>Vehicle Number Plate:</strong> {props.residentObj.numberPlate} <br/>
         </p>
