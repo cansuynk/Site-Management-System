@@ -8,6 +8,7 @@ import ListMessages from './partials/ListMessages';
 import AddUpdateApartment from './partials/AddUpdateApartment';
 import ListResidents from './partials/ListResidents';
 import AddUpdateResident from './partials/AddUpdateResident';
+import AddInvoiceDues from './partials/AddInvoiceDues';
 
 
 
@@ -54,7 +55,7 @@ function AdminPage() {
     (page === "listResidents")?<ListResidents/>:
     (page === "addUpdateApartment")?<AddUpdateApartment/>:
     (page === "addUpdateResident")?<AddUpdateResident/>:
-    (page === "addInvoiceDueInformation")?"addInvoiceDueInformation":null}
+    (page === "addInvoiceDues")?<AddInvoiceDues/>:null}
     </div>
 
 

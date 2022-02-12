@@ -6,28 +6,32 @@ const exampleList = [
         block: "A",
         apartmentNo: "59",
         debtType: "electric",
-        debt: "100"        
+        debt: "100",
+        status: 0     
     },
     {
         resident: "Emre Özkan",
         block: "A",
         apartmentNo: "29",
         debtType: "due",
-        debt: "200"  
+        debt: "200",
+        status: 1   
     },
     {
         resident: "Cansu Yanık",
         block: "A",
         apartmentNo: "59",
         debtType: "electric",
-        debt: "100"  
+        debt: "100",
+        status: 0  
     },
     {
         resident: "Cansu Yanık",
         block: "A",
         apartmentNo: "59",
         debtType: "electric",
-        debt: "100"  
+        debt: "100",
+        status: 1   
     }
 ];
 
@@ -44,6 +48,7 @@ function ListInvoicesDues() {
                 <th scope="col">Apartment</th>
                 <th scope="col">Debt Type</th>
                 <th scope="col">Debt (TL)</th>
+                <th scope="col">Paid</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,6 +59,14 @@ function ListInvoicesDues() {
                 <td>{o.block}{o.apartmentNo}</td>
                 <td>{o.debtType}</td>
                 <td>{o.debt}</td>
+                <td>  
+                    <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" checked = {o.status===1?true:false}/>
+                        <i class="form-icon"></i>
+                    </label>
+                    </div>
+                </td>
                 </tr>
                 )}
         </tbody>
@@ -61,6 +74,6 @@ function ListInvoicesDues() {
         </div>
     );
   }
-  
+
   export default ListInvoicesDues;
   

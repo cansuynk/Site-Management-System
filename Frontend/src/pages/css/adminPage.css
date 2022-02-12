@@ -99,3 +99,7 @@ a:link:visited:hover:active{
 .card-text{
     text-align: left;
 }
+
+option, input, td{
+    font-size: 1vw;
+}

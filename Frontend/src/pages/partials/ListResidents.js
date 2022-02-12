@@ -5,6 +5,8 @@ const exampleList = [
     {
         name: "Cansu",
         surname: "Yanık",
+        block: "A",
+        apartmentNo:"59",
         tcNo: "1111111111111",
         email: "cansuyanik96@gmail.com",
         phone: "05303003656",
@@ -13,6 +15,8 @@ const exampleList = [
     {
         name: "Emre Burak",
         surname: "Özkan",
+        block: "A",
+        apartmentNo:"59",
         tcNo: "1111111111111",
         email: "emreburakozkan@gmail.com",
         phone: "05416319137",
@@ -21,6 +25,8 @@ const exampleList = [
     {
         name: "Cansu",
         surname: "Yanık",
+        block: "A",
+        apartmentNo:"59",
         tcNo: "1111111111111",
         email: "cansuyanik96@gmail.com",
         phone: "05303003656",
@@ -29,6 +35,8 @@ const exampleList = [
     {
         name: "Emre Burak",
         surname: "Özkan",
+        block: "A",
+        apartmentNo:"59",
         tcNo: "1111111111111",
         email: "emreburakozkan@gmail.com",
         phone: "05416319137",
