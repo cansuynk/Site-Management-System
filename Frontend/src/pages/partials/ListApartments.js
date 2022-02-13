@@ -37,6 +37,24 @@ const exampleList = [
         apartmentNo: "29",
         ownerOrTenant: "-",
         resident: "-"
+    },
+    {
+        block: "B",
+        status: "empty",
+        type: "1+1",
+        floor: "3",
+        apartmentNo: "29",
+        ownerOrTenant: "-",
+        resident: "-"
+    },
+    {
+        block: "B",
+        status: "empty",
+        type: "1+1",
+        floor: "3",
+        apartmentNo: "29",
+        ownerOrTenant: "-",
+        resident: "-"
     }
 ];
 
@@ -47,7 +65,12 @@ if(exampleList.length === 0){
 }
 while(i<exampleList.length){
     let pushed = "";
-    if(i+1<exampleList.length && i+2<exampleList.length){
+    if(i+1<exampleList.length && i+2<exampleList.length && i+3<exampleList.length){
+        pushed = <tr><td>{<Apartments apartmentObj={exampleList[i]}/>}</td><td>{<Apartments apartmentObj={exampleList[i+1]}/>}</td><td>{<Apartments apartmentObj={exampleList[i+2]}/>}</td>
+        <td>{<Apartments apartmentObj={exampleList[i+3]}/>}</td></tr>;
+        i = i+4;
+    }
+    else if(i+1<exampleList.length && i+2<exampleList.length && i+3>=exampleList.length){
         pushed = <tr><td>{<Apartments apartmentObj={exampleList[i]}/>}</td><td>{<Apartments apartmentObj={exampleList[i+1]}/>}</td><td>{<Apartments apartmentObj={exampleList[i+2]}/>}</td></tr>;
         i = i+3;
     }
@@ -64,14 +87,25 @@ while(i<exampleList.length){
 
 function ListApartments() {
     return (
-        
-    <div class="table-responsive">
-        <table class="table align-middle">
-            <tbody>
-                {apartments}
-            </tbody>
-        </table>
+
+    <div class="container-fluid px-4">
+        <h2 class="mt-4">Apartments</h2>
+        <ol class="breadcrumb mb-4"></ol>
+        <div class="card mb-4">
+            <div class="card-body">
+
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <tbody>
+                        {apartments}
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
     </div>
+
+
     );
   }
   

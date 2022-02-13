@@ -5,64 +5,77 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Login() {
   return (
-<div className="container-fluid" id='containerId'>
-    
-        <div className="col-lg-8" id="col1">
-            <div className='logoGroup'>
-
-            <div className='logo center'>
-            <img className="mb-4" src={logo} alt="logo"/>
-            </div>
-
-            <div class="card-group center">
-            <div class="card col-md-6 cards">
-                <FontAwesomeIcon id= "icon" icon={faHomeLg}/>
-                <div class="card-body">
-                <h4 class="card-title">Site/Apartment Manager</h4>
-                <p class="card-text text-muted">Create apartments, edit information, assign residents, generate invoices, view payment information, read messages</p>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
-            <div class="card col-md-6 cards">
-                <FontAwesomeIcon id= "icon"  icon={faHomeUser} />
-                <div class="card-body">
-                <h4 class="card-title">Resident</h4>
-                <p class="card-text text-muted">View apartment information, view & pay invoices and dues, send a message to the manager</p>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
-            </div>
-            </div>
+    <div id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+        <main>
         
-        </div>
-        <div className="col-lg-4 center" id="col2">
-            <div className='signin'>
-                <main className="form-signin">
-                    <form action="/" method="post">
-                        
-                        <h1 className="h2 center mb-3 fw-normal">Please sign in</h1>
-
-                        
-                        <div className="form-floating">
-                            <label for="floatingInput">Email address</label>
-                            <input type="email" name="email" className="form-control bottom" placeholder="name@example.com"/>
-                            
-                        </div>
-
-                        <div className="form-floating">
-                            <label for="floatingPassword">Password</label>
-                            <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/>
-                            
-                        </div>
-
-                        <button className="btn btn-lg btn-primary btn-block btnCustom" type="submit">Sign in</button>
-                    </form>
-                </main>  
-            </div>     
-    </div>
+        
+        <div className="container-fluid center">
+        
+        <div className="col-1 p-3"></div>
+   
     
+        <div className="col-6 p-3"> 
+        <div className="container-fluid center">
+            <div className='row'>
+            <div className="col-12 center logoGroup">
+            <img className="mylogo" src={logo} alt="logo"/>
+            </div>
+            
+            <div className="col-6 p-3 card-group">
+
+                <div class="card shadow-lg border-0 rounded-lg mt-4">
+                <div class="card-header"><FontAwesomeIcon id= "icon" icon={faHomeLg}/> <br/><strong>Site/Apartment Manager</strong></div>
+                <div class="card-body">Create apartments, edit information, assign residents, generate invoices, view payment information, read messages</div>
+                </div>
+            </div>
+            
+            <div className="col-6 p-3 card-group">
+                <div class="card shadow-lg border-0 rounded-lg mt-4">
+                <div class="card-header"><FontAwesomeIcon id= "icon"  icon={faHomeUser}/><br/><strong>Resident</strong></div>
+                <div class="card-body">View apartment information, view & pay invoices and dues, send a message to the manager</div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        
+        <div className="col-1 p-3"></div>
+        <div className="col-4 p-3 no-float"> 
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                            <label for="inputEmail">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                            <label for="inputPassword">Password</label>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                            <a class="small"></a>
+                            <a class="btn btn-primary" href="index.html">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        </main>
+    </div>
+    <div id="layoutAuthentication_footer">
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; SiteMS 2022</div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
   );
 }

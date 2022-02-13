@@ -67,13 +67,19 @@ function AddInvoiceDue() {
     }
 
     return (
+        <div class="container-fluid px-4">
+        <h2 class="mt-4">Add Invoices / Dues</h2>
+        <ol class="breadcrumb mb-4"></ol>
+        <div class="card mb-4">
+        <div class="card-body">
+        <div className='center'>
         
-        <div>
+        </div>
         <h2 className="center">Add new debts</h2>
         <br/> <br/>
         <form className=''  onSubmit={handleSubmit}>
         <div className="container center">
-        <div className="col-lg-6"> 
+        <div className="col-lg-6 p-3"> 
             <div class="form-group">
             <label class="form-label" for="form6Example3">Select the Apartment and Resident</label>
             
@@ -83,7 +89,7 @@ function AddInvoiceDue() {
             </div>
         </div>
 
-        <div className="col-lg-6"> 
+        <div className="col-lg-6 p-3"> 
             <div class="form-group">
             <label class="form-label" for="form6Example3">Select the Depth Type</label>
             
@@ -95,7 +101,7 @@ function AddInvoiceDue() {
 
         </div>
         <div className="container center">
-        <div className="col-lg-6"> 
+        <div className="col-lg-6 p-3"> 
             <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Select Month</label>
             <select class="form-control" onChange={(e) => setValue3(e)}>
@@ -104,7 +110,7 @@ function AddInvoiceDue() {
             </select>
             </div>
         </div>
-        <div className="col-lg-6"> 
+        <div className="col-lg-6 p-3"> 
         <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Select Year</label>
             <select class="form-control" onChange={(e) => setValue4(e)}>
@@ -123,11 +129,12 @@ function AddInvoiceDue() {
 
         <br/>
         <div className="container center">
-        <button type="submit" value="Submit" class="btn-sm btn-primary btn-block">Submit</button>
+        <button type="submit" value="Submit" class="btn btn-primary btn-block">Submit</button>
         </div>
         </form>
         </div>
-
+        </div>
+        </div>
     );
   }
   

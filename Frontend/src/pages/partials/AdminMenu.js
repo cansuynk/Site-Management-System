@@ -9,28 +9,43 @@ function AdminMenu(props) {
   }
 
     return (
-        
-        <ul class="menu menuDiv">
-            
-            <a href="" value="list" onClick={(e) => handleClick(e,"listApartments")}><li class="menu-item item">List Apartments</li> </a>
+      
+      
+      <div class="sb-sidenav-menu">
+      <div class="nav">
+          <div class="sb-sidenav-menu-heading">Management</div>
+          <a class="nav-link" href="" onClick={(e) => handleClick(e,"listApartments")}>
+              <div class="sb-nav-link-icon"></div>
+              Apartments
+          </a>
+          <a class="nav-link" href="" onClick={(e) => handleClick(e,"listResidents")}>
+              <div class="sb-nav-link-icon"></div>
+              Residents
+          </a>
+          <a class="nav-link" href="" onClick={(e) => handleClick(e,"listInvoicesDues")}>
+              <div class="sb-nav-link-icon"></div>
+              Invoives / Dues
+          </a>
+          <a class="nav-link" href="" onClick={(e) => handleClick(e,"listMessages")}>
+              <div class="sb-nav-link-icon"></div>
+              Messages
+          </a>
+          <div class="sb-sidenav-menu-heading">Add / Update</div>
+          <a class="nav-link" href="" onClick={(e) => handleClick(e,"addUpdateApartment")}>
+              <div class="sb-nav-link-icon"></div>
+              Add / Update Apartment
+          </a>
+          <a class="nav-link" href=""  onClick={(e) => handleClick(e,"addUpdateResident")}>
+              <div class="sb-nav-link-icon"></div>
+              Add / Update Residents
+          </a>
+          <a class="nav-link" href="" onClick={(e) => handleClick(e,"addInvoiceDues")}>
+              <div class="sb-nav-link-icon"></div>
+              Add Invoives / Dues
+          </a>
 
-            <a href="" onClick={(e) => handleClick(e,"listResidents")}><li class="menu-item item">List Residents</li> </a>
-
-            <a href="" onClick={(e) => handleClick(e,"listInvoicesDues")}><li class="menu-item item">List Invoices / Dues</li> </a>
-
-            <a href="" onClick={(e) => handleClick(e,"listMessages")}><li class="menu-item item">List Messages</li> </a>
-        
-            <li class="divider"></li>
-            <li class="divider"></li>
-            <li class="divider"></li>
-
-            <a href="" onClick={(e) => handleClick(e,"addUpdateApartment")}><li class="menu-item item">Add / Update Apartment</li> </a>
-     
-            <a href="" onClick={(e) => handleClick(e,"addUpdateResident")}><li class="menu-item item">Add/ Update Resident</li></a>
-
-            <a href="" onClick={(e) => handleClick(e,"addInvoiceDues")}><li class="menu-item item">Add Invoice / Dues</li></a>
-            
-      </ul>   
+      </div>
+  </div>
       
     );
   }

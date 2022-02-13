@@ -9,25 +9,32 @@ function UserMenu(props) {
   }
 
     return (
-        
-        <ul class="menu menuDiv">
-            
-            <a href="" value="list" onClick={(e) => handleClick(e,"myProfile")}><li class="menu-item item">My Profile</li> </a>
-
-            <a href="" onClick={(e) => handleClick(e,"listInvoicesDues")}><li class="menu-item item">List Invoices / Dues</li> </a>
-
-            <a href="" onClick={(e) => handleClick(e,"listMessages")}><li class="menu-item item">List Messages</li> </a>
-        
-            <li class="divider"></li>
-            <li class="divider"></li>
-            <li class="divider"></li>
-
-            <a href="" onClick={(e) => handleClick(e,"payInvoicesDues")}><li class="menu-item item">Pay Invoices / Dues</li> </a>
-     
-            <a href="" onClick={(e) => handleClick(e,"sendMessage")}><li class="menu-item item">Send Message</li></a>
-            
-      </ul>   
-      
+        <div class="sb-sidenav-menu">
+        <div class="nav">
+            <div class="sb-sidenav-menu-heading">List</div>
+            <a class="nav-link" href="" onClick={(e) => handleClick(e,"myProfile")}>
+                <div class="sb-nav-link-icon"></div>
+                Profile
+            </a>
+            <a class="nav-link" href="" onClick={(e) => handleClick(e,"listInvoicesDues")}>
+                <div class="sb-nav-link-icon"></div>
+                Invoices / Dues
+            </a>
+            <a class="nav-link" href="" onClick={(e) => handleClick(e,"listMessages")}>
+                <div class="sb-nav-link-icon"></div>
+                Messages
+            </a>
+            <div class="sb-sidenav-menu-heading">Pay / Send Message</div>
+            <a class="nav-link" href="" onClick={(e) => handleClick(e,"payInvoicesDues")}>
+                <div class="sb-nav-link-icon"></div>
+                Pay Invoices / Dues
+            </a>
+            <a class="nav-link" href="" onClick={(e) => handleClick(e,"sendMessage")}>
+                <div class="sb-nav-link-icon"></div>
+                Send Message
+            </a>
+        </div>
+    </div>      
     );
   }
   

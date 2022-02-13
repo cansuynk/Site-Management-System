@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 let exampleList = [
     {
+        id: 1,
         resident: "Cansu Yanık",
         block: "A",
         apartmentNo: "59",
@@ -12,6 +13,7 @@ let exampleList = [
 
     },
     {
+        id: 2,
         resident: "Cansu Yanık",
         block: "A",
         apartmentNo: "59",
@@ -20,6 +22,7 @@ let exampleList = [
         time: "11.11.11 11.11"
     },
     {
+        id: 3,
         resident: "Emre Özkan",
         block: "A",
         apartmentNo: "59",
@@ -32,9 +35,25 @@ let exampleList = [
 exampleList = exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
 
 
-function ListMessages() {
+function ListMessages(props) {
+
+    let user = props.userObject;
+
+    function filterUser(u){
+        if(u.resident === user.name + " " + user.surname){
+            u.status = 1;
+            return u;
+        }
+            
+    }
+
+    if(props.userObject != null){
+        exampleList = exampleList.filter(filterUser);
+    }
+
+
     const [list, setList] = useState(exampleList);
-    const [openM, setOpenM] = useState(false);
+    const [openM, setOpenM] = useState(true);
     const [currObject, setcurrObject] = useState({});
 
     function openHandler(e,index){
@@ -44,7 +63,7 @@ function ListMessages() {
 
         newList[index].status = 1;
 
-        console.log(index);
+        console.log(newList[index].message);
         newList = newList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
 
         setList(newList);
@@ -53,56 +72,63 @@ function ListMessages() {
         console.log(list);
     }
 
-    function closeHandler(e,list){
-        e.preventDefault();
-        setList(list);
-        setOpenM(true);
-    }
-
     return (
         <div>
-        <h3 className="center">All messages are listed below</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                <td scope="col"></td>
-                <th scope="col">From</th>
-                <th scope="col">Apartment</th>
-                <th scope="col">Time</th>
-                <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                {list.map((o,index) => 
-                <tr className={o.status===0?"rowNew":""}>
-                <td><strong>{o.status===0?"NEW":null}</strong></td>
-                <td>{o.resident}</td>
-                <td>{o.block}{o.apartmentNo}</td>
-                <td>{o.time}</td>
-                <td>
-                    <a className="btn-sm btn-primary btnOpen" href="#example-modal-2" onClick={(e) => openHandler(e,index)}>Open</a>
-                    {!openM?
-                    <div class="modal" id="example-modal-2">
-                        <a href="#modals-sizes" class="modal-overlay" aria-label="Close" onClick={(e) => closeHandler(e,list)}></a>
-                        <div class="modal-container" role="document">
-                            <div class="modal-header">
-                                <a href="#modals-sizes" class="btn btn-clear float-right" aria-label="Close" onClick={(e) => closeHandler(e,list)}></a>
-                            <div class="modal-title h5">{currObject.resident} - {currObject.block}{currObject.apartmentNo}</div>
-                            </div>
-                            <div class="modal-body">
-                            <div class="content">
-                                {currObject.message}
-                            </div>
-                            </div>
-                            <div class="modal-footer">
-                            </div>
-                        </div>
-                    </div>:null}
-                </td>
-                </tr>
-                )}
-        </tbody>
-        </table>
+        <div class="container-fluid px-4">
+        <h2 class="mt-4">Messages</h2>
+        <ol class="breadcrumb mb-4"></ol>
+        <div class="card mb-4">
+        <div class="card-body">
+
+        <div className="container-fluid align-top-c">
+        <div className="col-lg-6 p-3"> 
+            <table class="table">
+                <thead>
+                    <tr>
+                    <td scope="col"></td>
+                    <th scope="col">From</th>
+                    <th scope="col">Apartment</th>
+                    <th scope="col">Time</th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {list.map((o,index) => 
+                    <tr className={o.status===0?"rowNew":""}>
+                    <td><strong>{o.status===0?"NEW":null}</strong></td>
+                    <td>{o.resident}</td>
+                    <td>{o.block}{o.apartmentNo}</td>
+                    <td>{o.time}</td>
+                    <td>
+                    
+                    <a className="btn btn-sm btn-primary btnOpen" href="#example-modal-2" onClick={(e) => openHandler(e,index, o.id)}>Open</a>  
+                    </td>
+                    </tr>
+                    )}
+            </tbody>
+            </table>
+        </div>
+        <div className="col-lg-6 p-3"> 
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Message Content</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    {!openM?<td>{currObject.message}</td>:null}
+                    </tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
+       
+
+        </div>
+        </div>
+        </div>
+
         </div>
     );
   }

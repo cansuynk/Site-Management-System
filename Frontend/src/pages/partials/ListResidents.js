@@ -45,6 +45,28 @@ const exampleList = [
         password: "xxxxxxxx",
         phone: "05416319137",
         numberPlate: "06-AEF-232"
+    },
+    {
+        name: "Emre Burak",
+        surname: "Özkan",
+        block: "A",
+        apartmentNo:"59",
+        tcNo: "1111111111111",
+        email: "emreburakozkan@gmail.com",
+        password: "xxxxxxxx",
+        phone: "05416319137",
+        numberPlate: "06-AEF-232"
+    },
+    {
+        name: "Emre Burak",
+        surname: "Özkan",
+        block: "A",
+        apartmentNo:"59",
+        tcNo: "1111111111111",
+        email: "emreburakozkan@gmail.com",
+        password: "xxxxxxxx",
+        phone: "05416319137",
+        numberPlate: "06-AEF-232"
     }
 ];
 
@@ -56,7 +78,12 @@ if(exampleList.length === 0){
 }
 while(i<exampleList.length){
     let pushed = "";
-    if(i+1<exampleList.length && i+2<exampleList.length){
+    if(i+1<exampleList.length && i+2<exampleList.length && i+3<exampleList.length){
+        pushed = <tr><td>{<Residents residentObj={exampleList[i]}/>}</td><td>{<Residents residentObj={exampleList[i+1]}/>}</td><td>{<Residents residentObj={exampleList[i+2]}/>}</td>
+        <td>{<Residents residentObj={exampleList[i+3]}/>}</td></tr>;
+        i = i+4;
+    }
+    else if(i+1<exampleList.length && i+2<exampleList.length && i+3>=exampleList.length){
         pushed = <tr><td>{<Residents residentObj={exampleList[i]}/>}</td><td>{<Residents residentObj={exampleList[i+1]}/>}</td><td>{<Residents residentObj={exampleList[i+2]}/>}</td></tr>;
         i = i+3;
     }
@@ -74,12 +101,21 @@ while(i<exampleList.length){
 function ListResidents() {
     return (
         
-        <div class="table-responsive">
-        <table class="table align-middle">
-            <tbody>
-                {residents}
-            </tbody>
-        </table>
+        <div class="container-fluid px-4">
+        <h2 class="mt-4">Residents</h2>
+        <ol class="breadcrumb mb-4"></ol>
+        <div class="card mb-4">
+            <div class="card-body">
+
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <tbody>
+                        {residents}
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
     </div>
     );
   }
