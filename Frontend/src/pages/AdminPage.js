@@ -1,19 +1,91 @@
 import './css/adminPage.css';
 import AdminMenu from './partials/AdminMenu';
 import ListApartments from './partials/ListApartments';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ListInvoicesDues from './partials/ListInvoicesDues';
 import ListMessages from './partials/ListMessages';
 import AddUpdateApartment from './partials/AddUpdateApartment';
 import ListResidents from './partials/ListResidents';
 import AddUpdateResident from './partials/AddUpdateResident';
 import AddInvoiceDues from './partials/AddInvoiceDues';
+import axios from 'axios';
 
 
 
 function AdminPage() {
   
   const [page, setPage] = useState("listApartments");
+
+  const [apartmentList, setApartmentList] = useState("");
+  const [residentList, setResidentList] = useState("");
+  const [messageList, setMessageList] = useState("");
+  const [invoiceDuesList, setinvoiceDuesList] = useState("");
+
+
+    useEffect(() => {
+
+        getApartments();
+        getResidents();
+        getMessages();
+        getInvoiceDues();
+
+    }, []);
+
+    const getApartments = () => {
+        axios.get('https://localhost:7214/SiteManagement/GetApartments').then(function (response) {
+            // handle success
+            //console.log(response);
+            setApartmentList(response.data);
+            
+        }).catch(function (error) {
+            // handle error
+            console.log(error);
+        }).then(function () {
+            
+        });
+    }
+
+    const getResidents = () => {
+        axios.get('https://localhost:7214/SiteManagement/GetResidents').then(function (response) {
+            // handle success
+            //console.log(response);
+            setResidentList(response.data);
+            
+        }).catch(function (error) {
+            // handle error
+            console.log(error);
+        }).then(function () {
+            
+        });
+    }
+
+    const getMessages = () => {
+        axios.get('https://localhost:7214/SiteManagement/GetMessages').then(function (response) {
+            // handle success
+            //console.log(response);
+            setMessageList(response.data);
+            
+        }).catch(function (error) {
+            // handle error
+            console.log(error);
+        }).then(function () {
+            
+        });
+    }
+
+    const getInvoiceDues = () => {
+        axios.get('https://localhost:7214/SiteManagement/GetInvoicesDues').then(function (response) {
+            // handle success
+            //console.log(response);
+            setinvoiceDuesList(response.data);
+            
+        }).catch(function (error) {
+            // handle error
+            console.log(error);
+        }).then(function () {
+            
+        });
+    }
 
   let callbackFunction = (childData) => {
     setPage(childData);
@@ -50,12 +122,12 @@ function AdminPage() {
         </div>
         <div id="layoutSidenav_content">
             <main>
-            {(page === "listApartments")?<ListApartments/>:
-            (page === "listInvoicesDues")?<ListInvoicesDues/>:
-            (page === "listMessages")?<ListMessages/>:
-            (page === "listResidents")?<ListResidents/>:
-            (page === "addUpdateApartment")?<AddUpdateApartment/>:
-            (page === "addUpdateResident")?<AddUpdateResident/>:
+            {(page === "listApartments")?<ListApartments apartmentList={apartmentList}/>:
+            (page === "listInvoicesDues")?<ListInvoicesDues invoiceDuesList={invoiceDuesList} apartmentList={apartmentList}/>:
+            (page === "listMessages")?<ListMessages messageList={messageList} residentList= {residentList}/>:
+            (page === "listResidents")?<ListResidents residentList= {residentList}/>:
+            (page === "addUpdateApartment")?<AddUpdateApartment apartmentList={apartmentList}/>:
+            (page === "addUpdateResident")?<AddUpdateResident residentList= {residentList}/>:
             (page === "addInvoiceDues")?<AddInvoiceDues/>:null}
             </main>
             <footer class="py-4 bg-light mt-auto">

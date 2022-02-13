@@ -1,11 +1,91 @@
 import '../css/adminPage.css';
+import React, { useState } from 'react';
+import axios from 'axios';
 
+const blocks = ["A", "B", "C", "D","E", "F", "G", "H", "I", "J", "K", "L", "M"];
 
-
-function AddUpdateResident() {
+function AddUpdateResident(props) {
 
     //if existing resident(check name: change)
     //else cretae password
+
+    let residentList = props.residentList;
+
+    const [name, setName] = useState("");
+    const [surname, setSurname] = useState("");
+    const [block, setBlock] = useState("");
+    const [no, setNo] = useState("");
+    const [tcNo, setTcNo] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [numberPlate, setNumberPlate] = useState("");
+
+    function generatePassword() {
+        var length = 8,
+            charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+            retVal = "";
+        for (var i = 0, n = charset.length; i < length; ++i) {
+            retVal += charset.charAt(Math.floor(Math.random() * n));
+        }
+        return retVal;
+    }
+
+    function handleSubmit(e){
+
+        if(name && surname && block && no && tcNo && email && phone && numberPlate){
+
+            let tcNoV = String(tcNo.target.value);
+
+            if(residentList.find(({ tcNo }) => tcNo === tcNoV)){
+                let resident = residentList.find(({ tcNo }) => tcNo === tcNoV);
+                console.log(resident.id);
+                
+                axios.put('https://localhost:7214/SiteManagement/UpdateResident', { params: { id: resident.id }, data:{
+                    name: name.target.value,
+                    surname: surname.target.value,
+                    block: block.target.value,
+                    apartmentNo: no.target.value,
+                    tcNo: tcNo.target.value,
+                    email: email.target.value,
+                    password: generatePassword(),
+                    phone: phone.target.value,
+                    numberPlate: numberPlate.target.value
+                }})
+                .then(function (response) {
+                    console.log(response);
+                    alert("Resident is updated.");
+                    //window.location.reload();
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+            else{
+                
+                axios.post('https://localhost:7214/SiteManagement/AddResident', {
+                    name: name.target.value,
+                    surname: surname.target.value,
+                    block: block.target.value,
+                    apartmentNo: no.target.value,
+                    tcNo: tcNo.target.value,
+                    email: email.target.value,
+                    password: generatePassword(),
+                    phone: phone.target.value,
+                    numberPlate: numberPlate.target.value
+                })
+                .then(function (response) {
+                    console.log(response);
+                    alert("New Resident is added.");
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+        }
+        else{
+            alert("Please fill all areas.");
+        }
+    }
 
     return (
 
@@ -19,36 +99,49 @@ function AddUpdateResident() {
 
         
         </div>
-        <form className='formDiv'>
+        <form className='formDiv' onSubmit={handleSubmit}>
 
         <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Name</label>
-            <input type="text" id="form6Example3" class="form-control"  placeHolder="Name" />
+            <input type="text" id="form6Example3" class="form-control"  placeHolder="Name" onChange={(e) => setName(e)}/>
         </div>
 
         <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Surname</label>
-            <input type="text" id="form6Example3" class="form-control"  placeHolder="Surname" />
+            <input type="text" id="form6Example3" class="form-control"  placeHolder="Surname" onChange={(e) => setSurname(e)}/>
+        </div>
+
+        <div class="form-outline mb-4 input-group-sm">
+            <label class="form-label" for="form6Example3">Select Block</label>
+            <select class="form-control"  onChange={(e) => setBlock(e)}>
+            <option selected>Open this select menu</option>
+            {blocks.map((b,index) => <option value={b}>{b}</option>)}
+            </select>
+        </div>
+
+        <div class="form-outline mb-4 input-group-sm">
+                <label class="form-label" for="form6Example3">Apartment No</label>
+                <input type="number" id="form6Example3" class="form-control" onChange={(e) => setNo(e)} />
         </div>
 
         <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Tc Number</label>
-            <input type="text" id="form6Example3" class="form-control"  placeHolder="Tc Number"/>
+            <input type="text" id="form6Example3" class="form-control"  placeHolder="Tc Number" onChange={(e) => setTcNo(e)}/>
         </div>
 
         <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Email</label>
-            <input type="email" id="form6Example3" class="form-control"  placeHolder="jane.doe@example.com"/>
+            <input type="email" id="form6Example3" class="form-control"  placeHolder="jane.doe@example.com" onChange={(e) => setEmail(e)}/>
         </div>
 
         <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Phone</label>
-            <input type="phone" id="form6Example3" class="form-control"  placeHolder="05xxxxxxxxx"/>
+            <input type="phone" id="form6Example3" class="form-control"  placeHolder="05xxxxxxxxx" onChange={(e) => setPhone(e)}/>
         </div>
 
         <div class="form-outline mb-4 input-group-sm">
             <label class="form-label" for="form6Example3">Vehicle Number Plate</label>
-            <input type="text" id="form6Example3" class="form-control"  placeHolder="Number Plate"/>
+            <input type="text" id="form6Example3" class="form-control"  placeHolder="Number Plate" onChange={(e) => setNumberPlate(e)}/>
         </div>
 
         <br/>

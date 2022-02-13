@@ -1,5 +1,5 @@
-
-
+import React, { useState, useEffect } from 'react';
+/*
 let exampleList = [
     {
         //apartmentId verildi (resident, block, apartment no yerine)
@@ -44,19 +44,28 @@ let exampleList = [
         status: 1   
     }
 ];
+*/
 
 
 
-exampleList = exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
 
 function ListInvoicesDues(props) {
 
-    let user = props.userObject;
+
+    function makeList(exampleList){
+        exampleList = exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
+        return exampleList;
+    }
+
+    let apartmentList = props.apartmentList;
+    let exampleList = makeList(props.invoiceDuesList);
 
     function filterUser(u){
         if(u.resident === user.name + " " + user.surname)
             return u;
     }
+
+    let user = props.userObject;
 
     if(props.userObject != null){
         exampleList = exampleList.filter(filterUser);
@@ -84,19 +93,19 @@ function ListInvoicesDues(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    {exampleList.map((o,index) => 
+                    {exampleList && exampleList.map((o,index) => 
                     <tr>
                     <th scope="row">{index+1}</th>
-                    <td>{o.resident}</td>
-                    <td>{o.block}{o.apartmentNo}</td>
+                    <td>{apartmentList.find( ({ id }) => id === o.apartmentId ).resident}</td>
+                    <td>{apartmentList.find( ({ id }) => id === o.apartmentId ).block} - {apartmentList.find( ({ id }) => id === o.apartmentId ).apartmentNo}</td>
                     <td>{o.debtType}</td>
                     <td>{o.debt}</td>
                     <td>{o.month}/{o.year}</td>
                     <td>  
                         <div class="form-group">
                         <label class="form-checkbox">
-                            <input type="checkbox" checked = {o.status===1?true:false}/>
-                            <i class="form-icon"></i>{o.status===1?"Paid":"Not Paid"}
+                            <input type="checkbox" checked = {o.status===true?true:false}/>
+                            <i class="form-icon"></i>{o.status===false?"Paid":"Not Paid"}
                         </label>
                         </div>
                     </td>

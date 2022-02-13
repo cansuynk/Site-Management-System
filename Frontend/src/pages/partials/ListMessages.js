@@ -1,6 +1,7 @@
 import '../css/adminPage.css';
 import React, { useState } from 'react';
 
+/*
 let exampleList = [
     {
         //resident id verildi, (resident, block, apartmentno yerine)
@@ -32,11 +33,20 @@ let exampleList = [
         time: "11.11.11 11.11"
     }
 ];
+*/
 
-exampleList = exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
+//exampleList = exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
 
 
 function ListMessages(props) {
+
+    function makeList(exampleList){
+        return exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
+    }
+
+    let exampleList = makeList(props.messageList);
+
+    let residentList = props.residentList;
 
     let user = props.userObject;
 
@@ -51,7 +61,8 @@ function ListMessages(props) {
     if(props.userObject != null){
         exampleList = exampleList.filter(filterUser);
     }
-
+    
+    
 
     const [list, setList] = useState(exampleList);
     const [openM, setOpenM] = useState(true);
@@ -95,11 +106,11 @@ function ListMessages(props) {
                 </thead>
                 <tbody>
                     {list.map((o,index) => 
-                    <tr className={o.status===0?"rowNew":""}>
-                    <td><strong>{o.status===0?"NEW":null}</strong></td>
-                    <td>{o.resident}</td>
-                    <td>{o.block}{o.apartmentNo}</td>
-                    <td>{o.time}</td>
+                    <tr className={o.status===false?"rowNew":""}>
+                    <td><strong>{o.status===false?"NEW":null}</strong></td>
+                    <td>{residentList.find( ({ id }) => id === o.residentId).name} {residentList.find( ({ id }) => id === o.residentId).surname}</td>
+                    <td>{residentList.find( ({ id }) => id === o.residentId).block}-{residentList.find( ({ id }) => id === o.residentId).apartmentNo}</td>
+                    <td>{o.time.replace('T', ' ').slice(0,-3)}</td>
                     <td>
                     
                     <a className="btn btn-sm btn-primary btnOpen" href="#example-modal-2" onClick={(e) => openHandler(e,index, o.id)}>Open</a>  

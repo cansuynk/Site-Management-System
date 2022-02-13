@@ -2,7 +2,6 @@ D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteMana
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\bin\Debug\net6.0\DAL.dll
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\bin\Debug\net6.0\ref\DAL.dll
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\bin\Debug\net6.0\DAL.pdb
-D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs

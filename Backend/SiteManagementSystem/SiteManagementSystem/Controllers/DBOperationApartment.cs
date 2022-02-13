@@ -9,7 +9,7 @@ namespace SiteManagementSystem.Controllers
     {
         private SiteManagementUserContext _context = new SiteManagementUserContext();
 
-        Logger logger = new Logger();
+        //Logger logger = new Logger();
 
         public bool AddModel(Apartment _apartment)
         {

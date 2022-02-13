@@ -11,7 +11,7 @@ import UserPage from './pages/UserPage';
 let open = true;
 ReactDOM.render(
   <React.StrictMode>
-    {!open? <App /> : <UserPage/>}
+    {!open? <App /> : <AdminPage/>}
   </React.StrictMode>,
   document.getElementById('root')
 );

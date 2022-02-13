@@ -1,6 +1,12 @@
 import '../css/apartment.css'
 
 function Residents(props) {
+
+  function handleClick(e, param) {
+    e.preventDefault();
+    props.parentCallback(param);
+  }
+
   return (
     <div class="card center cardDiv">
     <div class="card-body">
@@ -11,11 +17,11 @@ function Residents(props) {
         <strong>Apartment:</strong> Block {props.residentObj.block}, No: {props.residentObj.apartmentNo} <br/>
         <strong>Email:</strong> {props.residentObj.email} <br/>
         <strong>Generated Password:</strong> {props.residentObj.password} <br/>
-        <strong>TC NO:</strong> {props.residentObj.tcNo} <br/>
+        <strong>Tc No:</strong> {props.residentObj.tcNo} <br/>
         <strong>Phone:</strong> {props.residentObj.phone} <br/>
         <strong>Vehicle Number Plate:</strong> {props.residentObj.numberPlate} <br/>
         </p>
-        <button type="submit" class="btn-sm btn-primary">Delete</button>
+        <button type="submit" class="btn-sm btn-primary" onClick={(e) => handleClick(e,props.residentObj.id)}>Delete</button>
     </div>
     </div>
   );

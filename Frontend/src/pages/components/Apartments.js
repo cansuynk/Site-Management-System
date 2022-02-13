@@ -1,6 +1,13 @@
 import '../css/apartment.css'
+import axios from 'axios';
 
 function Apartments(props) {
+
+  function handleClick(e, param) {
+    e.preventDefault();
+    props.parentCallback(param);
+  }
+
   return (
     <div class="card center cardDiv">
     <div class="card-body">
@@ -12,7 +19,8 @@ function Apartments(props) {
         <strong>Apartment Status:</strong> {props.apartmentObj.status}  <br/>
         <strong>Resident:</strong> {props.apartmentObj.resident} ({props.apartmentObj.ownerOrTenant}) 
         </p>
-        <button type="submit" class="btn-sm btn-primary">Delete</button>
+        <button type="submit" class="btn-sm btn-primary" onClick={(e) => handleClick(e,props.apartmentObj.id)}>Delete</button>
+        
     </div>
     </div>
   );

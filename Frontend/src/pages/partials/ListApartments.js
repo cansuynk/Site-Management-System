@@ -1,6 +1,8 @@
 import Apartments from '../components/Apartments';
 import '../css/adminPage.css';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+/*
 const exampleList = [
     {
         block: "A",
@@ -84,8 +86,61 @@ while(i<exampleList.length){
     }
     apartments.push(pushed);
 }
+*/
 
-function ListApartments() {
+
+function ListApartments(props) {
+
+    //const [apartments, setApartments] = useState("")
+
+    
+    let callbackFunction = (childData) => {
+        console.log(`https://localhost:7214/SiteManagement/DeleteApartment/${childData}`);
+        axios.delete('https://localhost:7214/SiteManagement/DeleteApartment', { params: { id: childData } })
+        .then(function (response) {
+            console.log(response);
+            alert("Apartment is deleted.");
+            window.location.reload();
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    };
+
+    function makeList(exampleList){
+        let apartments = [];
+        let i=0;
+        if(exampleList.length === 0){
+            apartments.push(<h2 className='center'>There is not any apartments.</h2>);
+        }
+        while(i<exampleList.length){
+            let pushed = "";
+            if(i+1<exampleList.length && i+2<exampleList.length && i+3<exampleList.length){
+                pushed = <tr><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i]}/>}</td><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i+1]}/>}</td><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i+2]}/>}</td>
+                <td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i+3]}/>}</td></tr>;
+                i = i+4;
+            }
+            else if(i+1<exampleList.length && i+2<exampleList.length && i+3>=exampleList.length){
+                pushed = <tr><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i]}/>}</td><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i+1]}/>}</td><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i+2]}/>}</td></tr>;
+                i = i+3;
+            }
+            else if(i+1<exampleList.length && i+2>=exampleList.length){
+                pushed = <tr><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i]}/>}</td><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i+1]}/>}</td><td></td></tr>;
+                i = i+2;
+            }
+            else{
+                pushed = <tr><td>{<Apartments parentCallback = {callbackFunction} apartmentObj={exampleList[i]}/>}</td><td></td><td></td></tr>
+                i = i+1;
+            }
+            apartments.push(pushed);
+        }
+
+        return apartments;
+
+    }
+    let apartments = makeList(props.apartmentList);
+
+
     return (
 
     <div class="container-fluid px-4">
