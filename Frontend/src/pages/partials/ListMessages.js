@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 let exampleList = [
     {
+        //resident id verildi, (resident, block, apartmentno yerine)
         id: 1,
         resident: "Cansu Yanık",
         block: "A",

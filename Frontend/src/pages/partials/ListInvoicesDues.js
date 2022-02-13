@@ -2,6 +2,8 @@
 
 let exampleList = [
     {
+        //apartmentId verildi (resident, block, apartment no yerine)
+        //det int
         resident: "Cansu Yanık",
         block: "A",
         apartmentNo: "59",

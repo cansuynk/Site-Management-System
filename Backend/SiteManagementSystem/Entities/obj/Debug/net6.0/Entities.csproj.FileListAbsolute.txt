@@ -1,0 +1,17 @@
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\bin\Debug\net6.0\Entities.deps.json
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\bin\Debug\net6.0\Entities.runtimeconfig.json
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\bin\Debug\net6.0\Entities.dll
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\bin\Debug\net6.0\ref\Entities.dll
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\bin\Debug\net6.0\Entities.pdb
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\bin\Debug\net6.0\DAL.dll
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\bin\Debug\net6.0\DAL.pdb
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.csproj.CopyComplete
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.dll
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\ref\Entities.dll
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.pdb
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache

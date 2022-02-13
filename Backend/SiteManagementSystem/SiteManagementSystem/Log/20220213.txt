@@ -1,0 +1,34 @@
+1.	Get operation: Cat list is fetched.	Time: 12:24:45
+1.	Get operation: Apartment list is fetched.	Time: 14:22:24
+1.	Get operation: Apartment list is fetched.	Time: 14:27:45
+1.	Get operation: Resident list is fetched.	Time: 14:34:19
+1.	Get operation: Apartment list is fetched.	Time: 14:42:16
+2.	Get operation: Resident list is fetched.	Time: 14:42:38
+3.	Get operation: InvoiceDues list is fetched.	Time: 14:42:49
+4.	Get operation: Messages list is fetched.	Time: 14:42:57
+1.	Get operation: InvoiceDues list is fetched.	Time: 14:50:07
+2.	Get operation: Messages list is fetched.	Time: 14:50:16
+3.	Get operation: Apartment list is fetched.	Time: 14:52:01
+4.	Error add operation: Apartment with 5 id cannot added.	Status Code: 400	Time: 14:55:19
+5.	Get operation: Apartment list is fetched.	Time: 14:55:37
+6.	Error add operation: Apartment with 5 id cannot added.	Status Code: 400	Time: 14:55:48
+7.	Error add operation: Resident with 5 id cannot added.	Status Code: 400	Time: 14:57:10
+1.	Get operation: Apartment list is fetched.	Time: 15:12:02
+2.	Get operation: Resident list is fetched.	Time: 15:12:14
+3.	Get operation: InvoiceDues list is fetched.	Time: 15:12:20
+4.	Get operation: Messages list is fetched.	Time: 15:12:28
+5.	Success add operation: New apartment with 4 id is added.	Status Code: 200	Time: 15:14:18
+6.	Get operation: Apartment list is fetched.	Time: 15:14:32
+1.	Get operation: Resident list is fetched.	Time: 15:18:29
+2.	Success add operation: New resident with 5 id is added.	Status Code: 200	Time: 15:19:06
+1.	Get operation: Messages list is fetched.	Time: 15:28:03
+2.	Success add operation: New invoiceDues with 5 id is added.	Status Code: 200	Time: 15:28:44
+3.	Success add operation: New message with 5 id is added.	Status Code: 200	Time: 15:28:55
+4.	Get operation: Apartment list is fetched.	Time: 15:30:52
+5.	Success update operation: Apartment with 5 is updated.	Status Code: 200	Time: 15:31:56
+6.	Get operation: Apartment list is fetched.	Time: 15:32:07
+7.	Error deletion operation: There is no apartment with 0 id.	Status Code: 400	Time: 15:32:39
+8.	Error deletion operation: There is no apartment with 4 id.	Status Code: 400	Time: 15:32:57
+9.	Get operation: Apartment list is fetched.	Time: 15:33:04
+10.	Success deletion operation: Apartment with 5 id is deleted.	Status Code: 200	Time: 15:33:14
+11.	Get operation: Apartment list is fetched.	Time: 15:33:22
