@@ -1,5 +1,6 @@
 import '../css/adminPage.css';
 import React, { useState } from 'react';
+import axios from 'axios';
 
 /*
 let exampleList = [
@@ -82,6 +83,26 @@ function ListMessages(props) {
         
         setOpenM(false);
         console.log(list);
+
+        axios({
+            method: 'PUT',
+            url: 'https://localhost:7214/SiteManagement/UpdateMessage', 
+            params: { id: newList[index].id },
+            data: {
+                residentId: newList[index].residentId,
+                message: newList[index].message,
+                status: true,
+                time: newList[index].time
+            }, 
+            headers:{'Content-Type': 'application/json; charset=utf-8'}
+        }).then(function (response) {
+            console.log(response);
+            //alert("Apartment is updated.");
+            //window.location.reload();
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
     return (

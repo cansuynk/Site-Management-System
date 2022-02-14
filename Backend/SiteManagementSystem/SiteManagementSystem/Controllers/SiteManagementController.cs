@@ -229,6 +229,8 @@ namespace SiteManagementSystem.Controllers
         [ActionName("UpdateApartment")]
         public Result UpdateApartment(int id, [FromBody] Apartment updatedProfile)
         {
+            Console.WriteLine(id);
+            Console.WriteLine(updatedProfile);
             Result result = new Result();
 
             //fetch the whole list from db
@@ -238,11 +240,11 @@ namespace SiteManagementSystem.Controllers
             Apartment? _oldValue = userList.Find(o => o.id == id);
             if (_oldValue != null)
             {
-                dbOperationApartment.DeleteModel(id);
+                dbOperationApartment.DeleteModel(_oldValue.id);
                 dbOperationApartment.AddModel(updatedProfile);
 
                 result.HttpStatusCode = Ok().StatusCode; //Successfully updated.
-                result.Message = "Apartment with " + updatedProfile.id + " is updated.";
+                result.Message = "Apartment with " + _oldValue.id + " is updated.";
                 //logger.createLog("Success update operation: " + result.Message + "\tStatus Code: " + result.HttpStatusCode);
             }
             else
@@ -267,17 +269,46 @@ namespace SiteManagementSystem.Controllers
             Resident? _oldValue = userList.Find(o => o.id == id);
             if (_oldValue != null)
             {
-                dbOperationResident.DeleteModel(id);
+                dbOperationResident.DeleteModel(_oldValue.id);
                 dbOperationResident.AddModel(updatedProfile);
 
                 result.HttpStatusCode = Ok().StatusCode; //Successfully updated.
-                result.Message = "Resident with " + updatedProfile.id + " is updated.";
+                result.Message = "Resident with " + _oldValue.id + " is updated.";
                 //logger.createLog("Success update operation: " + result.Message + "\tStatus Code: " + result.HttpStatusCode);
             }
             else
             {
                 result.HttpStatusCode = BadRequest().StatusCode; //error code
                 result.Message = "There is no resident with " + id + " id.";
+                //logger.createLog("Error update operation: " + result.Message + "\tStatus Code: " + result.HttpStatusCode);
+            }
+            return result;
+        }
+
+        [HttpPut]
+        [ActionName("UpdateMessage")]
+        public Result UpdateMessage(int id, [FromBody] Message updatedProfile)
+        {
+            Result result = new Result();
+
+            //fetch the whole list from db
+            List<Message> userList = dbOperationMessages.GetMessage();
+
+            /*If desired profile is found from list, update it*/
+            Message? _oldValue = userList.Find(o => o.id == id);
+            if (_oldValue != null)
+            {
+                dbOperationMessages.DeleteModel(_oldValue.id);
+                dbOperationMessages.AddModel(updatedProfile);
+
+                result.HttpStatusCode = Ok().StatusCode; //Successfully updated.
+                result.Message = "Message with " + _oldValue.id + " is updated.";
+                //logger.createLog("Success update operation: " + result.Message + "\tStatus Code: " + result.HttpStatusCode);
+            }
+            else
+            {
+                result.HttpStatusCode = BadRequest().StatusCode; //error code
+                result.Message = "There is no message with " + id + " id.";
                 //logger.createLog("Error update operation: " + result.Message + "\tStatus Code: " + result.HttpStatusCode);
             }
             return result;

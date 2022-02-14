@@ -9,3 +9,15 @@ D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteMana
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.dll
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\ref\DAL.dll
 D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.pdb
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\bin\Debug\net6.0\DAL.dll
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\bin\Debug\net6.0\ref\DAL.dll
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\bin\Debug\net6.0\DAL.pdb
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.dll
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\ref\DAL.dll
+D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.pdb

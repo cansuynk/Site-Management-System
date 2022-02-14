@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
-
-
+/*
 const exampleList = [
     {
         block: "A",
@@ -40,14 +40,15 @@ const exampleList = [
         resident: "-"
     }
 ];
-
+*/
 const months = ["January", "February", "March", "April", "May", "Jun", "July", "August", "September", "October", "November", "December"];
 const years = [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000];
 const depthTypes = ["Dues", "Electric", "Hot Water", "Gas", "Other"];
 
-let newList = exampleList.filter( (a) => a.resident!=="-");
 
-function AddInvoiceDue() {
+function AddInvoiceDue(props) {
+
+    let newList = props.apartmentList.filter( (a) => a.resident!=="-");
 
     const [value1, setValue1] = useState(newList[0].resident);
     const [value2, setValue2] = useState("electric");
@@ -58,11 +59,30 @@ function AddInvoiceDue() {
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(value1.target.value);
-        console.log(value2.target.value);
-        console.log(value3.target.value);
-        console.log(value4.target.value);
-        console.log(value5.target.value);
+
+        if(value1 && value2 && value3 && value4 && value5){
+            let aId = newList.find( ({block, apartmentNo, resident}) => (block + apartmentNo + " - " + resident) === value1.target.value).id;   
+            axios.post('https://localhost:7214/SiteManagement/AddInvoiceDues', {
+                apartmentId: aId,
+                debtType: value2.target.value,
+                debt: value5.target.value,
+                month: months.indexOf(value3.target.value)+1,
+                year: value4.target.value,
+                status: false,
+            })
+            .then(function (response) {
+                console.log(response);
+                alert("New depth is added.");
+                window.location.reload();
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
+        else{
+            alert("Please fill all areas.");
+        }
+        
         
     }
 

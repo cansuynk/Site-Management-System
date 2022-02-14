@@ -128,7 +128,7 @@ function AdminPage() {
             (page === "listResidents")?<ListResidents residentList= {residentList}/>:
             (page === "addUpdateApartment")?<AddUpdateApartment apartmentList={apartmentList}/>:
             (page === "addUpdateResident")?<AddUpdateResident residentList= {residentList}/>:
-            (page === "addInvoiceDues")?<AddInvoiceDues/>:null}
+            (page === "addInvoiceDues")?<AddInvoiceDues apartmentList={apartmentList}/>:null}
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">

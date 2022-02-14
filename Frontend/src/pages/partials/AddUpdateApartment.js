@@ -40,20 +40,25 @@ function AddUpdateApartment(props) {
             if(apartmentList.find(({ block, apartmentNo }) => block === blockV && apartmentNo === noV)){
                 let apartment = apartmentList.find(({ block, apartmentNo }) => block === blockV && apartmentNo === noV);
                 console.log(apartment.id);
-                
-                axios.put('https://localhost:7214/SiteManagement/UpdateApartment', { params: { id: apartment.id }, data:{
-                    block: block.target.value,
-                    status: status.target.value,
-                    type: type.target.value,
-                    floor: floorr.target.value,
-                    apartmentNo: no.target.value,
-                    ownerOrTenant: ten,
-                    resident: res
-                }})
-                .then(function (response) {
+                let id = apartment.id;
+                axios({
+                    method: 'PUT',
+                    url: 'https://localhost:7214/SiteManagement/UpdateApartment', 
+                    params: { id: id },
+                    data: {
+                        block: block.target.value,
+                        status: status.target.value,
+                        type: type.target.value,
+                        floor: floorr.target.value,
+                        apartmentNo: no.target.value,
+                        ownerOrTenant: ten,
+                        resident: res
+                    }, 
+                    headers:{'Content-Type': 'application/json; charset=utf-8'}
+                }).then(function (response) {
                     console.log(response);
                     alert("Apartment is updated.");
-                    //window.location.reload();
+                    window.location.reload();
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -73,6 +78,7 @@ function AddUpdateApartment(props) {
                 .then(function (response) {
                     console.log(response);
                     alert("New Apartment is added.");
+                    window.location.reload();
                 })
                 .catch(function (error) {
                     console.log(error);

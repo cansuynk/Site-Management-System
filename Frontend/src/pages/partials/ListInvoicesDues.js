@@ -58,6 +58,7 @@ function ListInvoicesDues(props) {
     }
 
     let apartmentList = props.apartmentList;
+    console.log(apartmentList.find( ({ id }) => id === 12 ).resident);
     let exampleList = makeList(props.invoiceDuesList);
 
     function filterUser(u){
@@ -121,4 +122,3 @@ function ListInvoicesDues(props) {
   }
 
   export default ListInvoicesDues;
-  

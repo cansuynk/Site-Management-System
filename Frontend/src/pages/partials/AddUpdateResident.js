@@ -39,22 +39,27 @@ function AddUpdateResident(props) {
             if(residentList.find(({ tcNo }) => tcNo === tcNoV)){
                 let resident = residentList.find(({ tcNo }) => tcNo === tcNoV);
                 console.log(resident.id);
-                
-                axios.put('https://localhost:7214/SiteManagement/UpdateResident', { params: { id: resident.id }, data:{
-                    name: name.target.value,
-                    surname: surname.target.value,
-                    block: block.target.value,
-                    apartmentNo: no.target.value,
-                    tcNo: tcNo.target.value,
-                    email: email.target.value,
-                    password: generatePassword(),
-                    phone: phone.target.value,
-                    numberPlate: numberPlate.target.value
-                }})
-                .then(function (response) {
+
+                axios({
+                    method: 'PUT',
+                    url: 'https://localhost:7214/SiteManagement/UpdateResident', 
+                    params: { id: resident.id },
+                    data: {
+                        name: name.target.value,
+                        surname: surname.target.value,
+                        block: block.target.value,
+                        apartmentNo: no.target.value,
+                        tcNo: tcNo.target.value,
+                        email: email.target.value,
+                        password: generatePassword(),
+                        phone: phone.target.value,
+                        numberPlate: numberPlate.target.value
+                    }, 
+                    headers:{'Content-Type': 'application/json; charset=utf-8'}
+                }).then(function (response) {
                     console.log(response);
                     alert("Resident is updated.");
-                    //window.location.reload();
+                    window.location.reload();
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -76,6 +81,7 @@ function AddUpdateResident(props) {
                 .then(function (response) {
                     console.log(response);
                     alert("New Resident is added.");
+                    window.location.reload();
                 })
                 .catch(function (error) {
                     console.log(error);

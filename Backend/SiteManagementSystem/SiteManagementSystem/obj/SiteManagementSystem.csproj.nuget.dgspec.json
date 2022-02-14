@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj": {}
+    "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj": {}
   },
   "projects": {
-    "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj": {
+    "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\yanik\\.nuget\\packages\\",
-        "outputPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\obj\\",
+        "projectPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yanik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,24 +54,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj": {
+    "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\yanik\\.nuget\\packages\\",
-        "outputPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\obj\\",
+        "projectPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yanik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj"
+              "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj"
               }
             }
           }
@@ -142,24 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj": {
+    "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj",
+        "projectUniqueName": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj",
         "projectName": "SiteManagementSystem",
-        "projectPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj",
-        "packagesPath": "C:\\Users\\yanik\\.nuget\\packages\\",
-        "outputPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\obj\\",
+        "projectPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\SiteManagementSystem.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\SiteManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\yanik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -173,8 +164,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj"
+              "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\Entities\\Entities.csproj"
               }
             }
           }
@@ -216,7 +207,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
