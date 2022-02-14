@@ -18,7 +18,9 @@ namespace Entities
         //write connection string of db used
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=PRJ-CYANIK; Database = SiteManagementDB; integrated security = True;");
+            //options.UseSqlServer("Server=PRJ-CYANIK; Database = SiteManagementDB; integrated security = True;");
+            options.UseSqlServer("Server=DESKTOP-CST55KG\\SQLEXPRESS; Database = SiteManagementDB; integrated security = True;");
+
         }
 
         public DbSet<Apartment> Apartment { get; set; }

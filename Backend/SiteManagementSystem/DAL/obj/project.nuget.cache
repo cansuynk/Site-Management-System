@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sGKz+pXDRRe4FKEnY0cwuToaR7fQYM6NrwTyoFqL1dfdms+OP0GVOlR1ato8dzg30DnXf0El2b7UqKn4HOMkJw==",
+  "dgSpecHash": "Q4K87PYNS/PaiIgSqmI3Vf2DycUDA3FzOSA8i6oNTV/cP3j7x1SsQglbK9woNAdPoxh3A6zNZ3GQtsEeRTpzeA==",
   "success": true,
-  "projectFilePath": "D:\\gitHubRepo\\Cansu\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj",
+  "projectFilePath": "D:\\githubRepo\\SiteManagementSystem\\CansuYANIK_GraduationProject\\Backend\\SiteManagementSystem\\DAL\\DAL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

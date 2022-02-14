@@ -314,6 +314,35 @@ namespace SiteManagementSystem.Controllers
             return result;
         }
 
+        [HttpPut]
+        [ActionName("UpdateInvoiceDues")]
+        public Result UpdateInvoiceDues(int id, [FromBody] InvoiceDues updatedProfile)
+        {
+            Result result = new Result();
+
+            //fetch the whole list from db
+            List<InvoiceDues> userList = dbOperationInvoicesDues.GetInvoiceDues();
+
+            /*If desired profile is found from list, update it*/
+            InvoiceDues? _oldValue = userList.Find(o => o.id == id);
+            if (_oldValue != null)
+            {
+                dbOperationInvoicesDues.DeleteModel(_oldValue.id);
+                dbOperationInvoicesDues.AddModel(updatedProfile);
+
+                result.HttpStatusCode = Ok().StatusCode; //Successfully updated.
+                result.Message = "Invoice/Dues with " + _oldValue.id + " is updated.";
+                //logger.createLog("Success update operation: " + result.Message + "\tStatus Code: " + result.HttpStatusCode);
+            }
+            else
+            {
+                result.HttpStatusCode = BadRequest().StatusCode; //error code
+                result.Message = "There is no invoice/dues with " + id + " id.";
+                //logger.createLog("Error update operation: " + result.Message + "\tStatus Code: " + result.HttpStatusCode);
+            }
+            return result;
+        }
+
         /*HTTP delete request method*/
         [HttpDelete]
         [ActionName("DeleteApartment")]

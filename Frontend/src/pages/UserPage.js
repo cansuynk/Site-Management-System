@@ -32,6 +32,7 @@ function UserPage(props) {
     const [residentList, setResidentList] = useState("");
     const [messageList, setMessageList] = useState("");
     const [invoiceDuesList, setinvoiceDuesList] = useState("");
+    const [creditCards, setCreditCards] = useState("");
 
   useEffect(() => {
 
@@ -39,6 +40,7 @@ function UserPage(props) {
     getResidents();
     getMessages();
     getInvoiceDues();
+    getCreditCards();
 
 }, []);
 
@@ -109,6 +111,20 @@ const getInvoiceDues = () => {
 }
 
 
+const getCreditCards = () => {
+    axios.get('https://localhost:7039/CreditCards').then(function (response) {
+        // handle success
+        console.log(response.data);
+        setCreditCards(response.data);
+        
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    }).then(function () {
+        
+    });
+}
+
 function setUserProfile(){
     console.log(loginEmail);
 
@@ -158,7 +174,7 @@ function setUserProfile(){
             {(page === "myProfile")?<Profile userObject={user}/>:
             (page === "listInvoicesDues")?<ListInvoicesDues invoiceDuesList={invoiceDuesList} apartmentList={apartmentList} userObject={user}/>:
             (page === "listMessages")?<ListMessages messageList={messageList} residentList= {residentList} userObject={user}/>:
-            (page === "payInvoicesDues")?<PayInvoicesDues userObject={user}/>:
+            (page === "payInvoicesDues")?<PayInvoicesDues apartmentList={apartmentList} invoiceDuesList={invoiceDuesList} userObject={user} creditCardList={creditCards} />:
             (page === "sendMessage")?<SendMessage userObject={user}/>:null}
             </main>
             <footer class="py-4 bg-light mt-auto">

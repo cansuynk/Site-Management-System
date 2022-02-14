@@ -21,3 +21,4 @@ D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DA
 D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.dll
 D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\ref\DAL.dll
 D:\gitHubRepo\Cansu\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.pdb
+D:\githubRepo\SiteManagementSystem\CansuYANIK_GraduationProject\Backend\SiteManagementSystem\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache

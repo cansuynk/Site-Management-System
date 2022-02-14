@@ -58,7 +58,7 @@ function ListInvoicesDues(props) {
     }
 
     let apartmentList = props.apartmentList;
-    console.log(apartmentList.find( ({ id }) => id === 12 ).resident);
+    //console.log(apartmentList.find( ({ id }) => id === 12 ).resident);
     let exampleList = makeList(props.invoiceDuesList);
     
     let user = props.userObject;
