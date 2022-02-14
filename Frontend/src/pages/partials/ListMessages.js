@@ -52,11 +52,10 @@ function ListMessages(props) {
     let user = props.userObject;
 
     function filterUser(u){
-        if(u.resident === user.name + " " + user.surname){
+        if(user.id === u.residentId){
             u.status = 1;
             return u;
         }
-            
     }
 
     if(props.userObject != null){

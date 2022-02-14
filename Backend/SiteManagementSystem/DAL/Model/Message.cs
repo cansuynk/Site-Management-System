@@ -17,7 +17,7 @@ namespace DAL.Model
 
         public bool status { get; set; }
 
-        public DateTime time { get; set; }
+        public string time { get; set; }
 
 
     }

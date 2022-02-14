@@ -60,13 +60,14 @@ function ListInvoicesDues(props) {
     let apartmentList = props.apartmentList;
     console.log(apartmentList.find( ({ id }) => id === 12 ).resident);
     let exampleList = makeList(props.invoiceDuesList);
+    
+    let user = props.userObject;
 
     function filterUser(u){
-        if(u.resident === user.name + " " + user.surname)
+        let apartment = apartmentList.find( ({ id }) => id === u.apartmentId );
+        if(apartment.resident === user.name + " " + user.surname)
             return u;
     }
-
-    let user = props.userObject;
 
     if(props.userObject != null){
         exampleList = exampleList.filter(filterUser);

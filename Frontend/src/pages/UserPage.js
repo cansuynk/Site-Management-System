@@ -1,12 +1,14 @@
 import './css/userPage.css';
 import UserMenu from './partials/UserMenu';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Profile from './partials/Profile';
 import ListInvoicesDues from './partials/ListInvoicesDues';
 import ListMessages from './partials/ListMessages';
 import SendMessage from './partials/SendMessage';
 import PayInvoicesDues from './partials/PayInvoicesDues';
+import axios from 'axios';
 
+/*
 let user = {
   name: "Cansu",
   surname: "Yanık",
@@ -18,10 +20,105 @@ let user = {
   phone: "05303003656",
   numberPlate: "06-CIY-680"
 }
+*/
 
-function UserPage() {
-  
-  const [page, setPage] = useState("myProfile");
+function UserPage(props) {
+
+    let loginEmail = props.email;
+    const [page, setPage] = useState("myProfile");
+    const [user, setUser] = useState("");
+
+    const [apartmentList, setApartmentList] = useState("");
+    const [residentList, setResidentList] = useState("");
+    const [messageList, setMessageList] = useState("");
+    const [invoiceDuesList, setinvoiceDuesList] = useState("");
+
+  useEffect(() => {
+
+    getApartments();
+    getResidents();
+    getMessages();
+    getInvoiceDues();
+
+}, []);
+
+useEffect(() => {
+
+    setUserProfile();
+
+});
+
+const getApartments = () => {
+    axios.get('https://localhost:7214/SiteManagement/GetApartments').then(function (response) {
+        // handle success
+        //console.log(response);
+        setApartmentList(response.data);
+        
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    }).then(function () {
+        
+    });
+}
+
+const getResidents = () => {
+    axios.get('https://localhost:7214/SiteManagement/GetResidents').then(function (response) {
+        // handle success
+        //console.log(response);
+        setResidentList(response.data);
+        
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    }).then(function () {
+        
+    });
+
+    
+}
+
+const getMessages = () => {
+    axios.get('https://localhost:7214/SiteManagement/GetMessages').then(function (response) {
+        // handle success
+        //console.log(response);
+        setMessageList(response.data);
+        
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    }).then(function () {
+        
+    });
+}
+
+const getInvoiceDues = () => {
+    axios.get('https://localhost:7214/SiteManagement/GetInvoicesDues').then(function (response) {
+        // handle success
+        //console.log(response);
+        setinvoiceDuesList(response.data);
+        
+    }).catch(function (error) {
+        // handle error
+        console.log(error);
+    }).then(function () {
+        
+    });
+    
+    setUserProfile();
+}
+
+
+function setUserProfile(){
+    console.log(loginEmail);
+
+    for(let i=0; i<residentList.length; i++){
+        if(residentList[i].email === loginEmail){
+            setUser(residentList[i]);
+            return;
+        }
+    }
+}
 
   let callbackFunction = (childData) => {
     setPage(childData);
@@ -59,10 +156,10 @@ function UserPage() {
         <div id="layoutSidenav_content">
             <main>
             {(page === "myProfile")?<Profile userObject={user}/>:
-            (page === "listInvoicesDues")?<ListInvoicesDues userObject={user}/>:
-            (page === "listMessages")?<ListMessages userObject={user}/>:
+            (page === "listInvoicesDues")?<ListInvoicesDues invoiceDuesList={invoiceDuesList} apartmentList={apartmentList} userObject={user}/>:
+            (page === "listMessages")?<ListMessages messageList={messageList} residentList= {residentList} userObject={user}/>:
             (page === "payInvoicesDues")?<PayInvoicesDues userObject={user}/>:
-            (page === "sendMessage")?<SendMessage/>:null}
+            (page === "sendMessage")?<SendMessage userObject={user}/>:null}
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
