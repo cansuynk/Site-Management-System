@@ -107,7 +107,7 @@ function ListInvoicesDues(props) {
                         <div class="form-group">
                         <label class="form-checkbox">
                             <input type="checkbox" checked = {o.status===true?true:false}/>
-                            <i class="form-icon"></i>{o.status===false?"Paid":"Not Paid"}
+                            <i class="form-icon"></i>{o.status===false?" Not Paid":" Paid"}
                         </label>
                         </div>
                     </td>

@@ -11,7 +11,7 @@ import UserPage from './pages/UserPage';
 let open = true;
 ReactDOM.render(
   <React.StrictMode>
-    {!open? <AdminPage /> : <UserPage email={"cansuyanik@test.com"}/>}
+    {!open? <AdminPage /> : <UserPage email={"emreozkan@test.com"}/>}
   </React.StrictMode>,
   document.getElementById('root')
 );

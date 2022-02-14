@@ -90,6 +90,7 @@ function AddUpdateResident(props) {
         }
         else{
             alert("Please fill all areas.");
+            e.preventDefault();
         }
     }
 

@@ -130,7 +130,7 @@ function ListMessages(props) {
                     <td><strong>{o.status===false?"NEW":null}</strong></td>
                     <td>{residentList.find( ({ id }) => id === o.residentId).name} {residentList.find( ({ id }) => id === o.residentId).surname}</td>
                     <td>{residentList.find( ({ id }) => id === o.residentId).block}-{residentList.find( ({ id }) => id === o.residentId).apartmentNo}</td>
-                    <td>{o.time.replace('T', ' ').slice(0,-3)}</td>
+                    <td>{o.time}</td>
                     <td>
                     
                     <a className="btn btn-sm btn-primary btnOpen" href="#example-modal-2" onClick={(e) => openHandler(e,index, o.id)}>Open</a>  

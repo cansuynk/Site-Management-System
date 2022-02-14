@@ -114,7 +114,7 @@ const getInvoiceDues = () => {
 const getCreditCards = () => {
     axios.get('https://localhost:7039/CreditCards').then(function (response) {
         // handle success
-        console.log(response.data);
+        console.log(response);
         setCreditCards(response.data);
         
     }).catch(function (error) {

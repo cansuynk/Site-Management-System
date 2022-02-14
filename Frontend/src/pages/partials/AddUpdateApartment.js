@@ -86,8 +86,9 @@ function AddUpdateApartment(props) {
             }
         }
         else{
-            console.log("ggg");
+            
             alert("Please fill the areas.");
+            e.preventDefault();
         }
     }
 
