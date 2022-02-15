@@ -23,7 +23,7 @@ You have two types of users.
 - Can send a message to the manager.
 - Displays his/her payments.
 
-In the Apartment/Housing information
+### In the Apartment/Housing information
 - In which block
 - Status (Full-empty)
 - Type (2+1 etc.)
@@ -31,14 +31,14 @@ In the Apartment/Housing information
 - Apartment number
 - Apartment owner or tenant
 
-In user information
+### In user information
 - Name surname
 - TCNo
 - E-mail
 - Phone
 - Vehicle information (plate number, if any)
 
-When the system is used first
+### When the system is used first
 1.	The manager enters the apartment information.
 2.	Enters the resident information. A password is automatically generated to log in.
 3.	Assigns users to apartments.
@@ -70,8 +70,6 @@ Tables and columns:
 <p align="center">
   <img align="left" src="./Screenshots/ApartmentTable.PNG" />
    <img align="right" src="./Screenshots/ResidentTable.PNG" />
-</p>
-<p align="center">
   <img align="left" src="./Screenshots/InvoiceDuesTable.PNG" />
    <img align="right" src="./Screenshots/MessageTable.PNG" />
 </p>
@@ -123,4 +121,80 @@ In this project, there are 3 main pages which are Login, AdminPage and UserPage.
 In AdminPage, there are 7 partial pages which are ListApartment, ListResident, ListInvoicesDues, ListMessages, AddUpdateApartment, AddUpdateResidents and AddInvoicesDues. 
 In UserPage, there are 5 partial pages which are Profile, ListInvoicesDues, ListMessages, PayInvoicesDues and SendMessages.
 
+## LoginPage
+
+<p align="center">
+  <img src="./Screenshots/LoginPage.PNG" />
+</p>
+
+## Admin Pages
+Partial pages are as follows:
+
+- ListApartment
+
+<p align="center">
+  <img src="./Screenshots/AdminPage/ListApartments.PNG" />
+</p>
+
+- ListResident
+
+<p align="center">
+  <img src="./Screenshots/AdminPage/ListResidents.PNG" />
+</p>
+
+- ListInvoicesDues
+You can see the paid/not paid information
+<p align="center">
+  <img src="./Screenshots/AdminPage/ListInvoicesDues.PNG" />
+</p>
+
+- MessageList
+You can see the unread/read information
+<p align="center">
+  <img src="./Screenshots/AdminPage/MessageList.PNG" />
+</p>
+
+- MessageList after open a new message
+Unread message becomes read message
+<p align="center">
+  <img src="./Screenshots/AdminPage/MessagesAfterOpen.PNG" />
+</p>
+
+- AddUpdateApartment
+New apartment can be added or existing apartment can be updated (according to block and apartment No)
+<p align="center">
+  <img src="./Screenshots/AdminPage/AddUpdateApartment.PNG" />
+</p>
+
+- Add an example apartment
+
+<p align="center">
+  <img src="./Screenshots/AdminPage/AddApartment.PNG" />
+</p>
+
+<p align="center">
+  <img src="./Screenshots/AdminPage/ApartmentAdded.PNG" />
+</p>
+
+- AddUpdateResident
+New resident can be added or existing resident can be updated (according to tcNo)
+<p align="center">
+  <img src="./Screenshots/AdminPage/AddUpdateResident.PNG" />
+</p>
+
+- AddDept
+Existing apartments are listed and can be selected.
+<p align="center">
+  <img src="./Screenshots/AdminPage/AddDept.PNG" />
+</p>
+
+- Delete an existing resident
+
+<p align="center">
+  <img src="./Screenshots/AdminPage/DeleteResident.PNG" />
+</p>
+
+<p align="center">
+  <img src="./Screenshots/AdminPage/AfterDeletion.PNG" />
+</p>
 
