@@ -3,11 +3,11 @@ Akbank FullStack Bootcamp Graduation Project - Site Management System (SiteMS)
 
 # Table of Contents
 
-1. [Project Explanation](#Project-Explanation)
-2. [Used technologies](#Used-technologies)
-3. [Database](#Database)
-4. [Backend](#Backend)
-5. [Frontend](#Frontend)
+1. [Project Explanation](#1-Project-Explanation)
+2. [Used technologies](#2-Used-technologies)
+3. [Database](#3-Database)
+4. [Backend](#4-Backend)
+5. [Frontend](#5-Frontend)
 
 ## 1. Project Explanation
 You are an administrator on a site. You will manage the dues and common use electricity, water and natural gas bills of the apartments on your site through a system.
