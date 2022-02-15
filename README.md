@@ -1,6 +1,13 @@
-# CansuYANIK_GraduationProject
+# Site Management System (SiteMS)
 Akbank FullStack Bootcamp Graduation Project - Site Management System (SiteMS)
 
+# Table of Contents
+
+1. [Project Explanation](#Project-Explanation)
+3. [Used technologies](#Used-technologies:)
+4. [Database](#Database)
+5. [Backend](#Backend)
+6. [Frontend](#Frontend)
 
 ## Project Explanation
 You are an administrator on a site. You will manage the dues and common use electricity, water and natural gas bills of the apartments on your site through a system.
@@ -45,7 +52,7 @@ You have two types of users.
 4.	Enters monthly dues information.
 5.	Enters billing information monthly
 <p>
-Apart from the interface, a separate service will be written for users to pay by credit card. Data for credit card service will be kept in mongodb. The service will be written as .Net WebApi.
+Apart from the interface, a separate service will be written for users to pay by credit card. Data for credit card service will be kept in mongodb. The service will be written as .Net WebApi.<br/>
 In this service, payment is made by checking the bank information (credit card number, etc.) for each user in the system.
 Payment can only be made by credit card.
 </p>
@@ -76,8 +83,10 @@ Tables and columns:
    <img align="right" src="./Screenshots/MessageTable.PNG" />
 </p>
 
+<br/>
+
 <p>
-The CreditCard collection in mongodb is as follows: 
+The CreditCard collection in mongodb is as follows: <br/>
 residentId is related with the id of the ResidentTable.
 </p>
  
@@ -108,7 +117,7 @@ APIs that is used:
 </p>
 
 <p>
-APIs that is used: 
+APIs that is used: <br/>
 I used 2 APIs: Get Credit Cards and Post
 </p>
 
@@ -124,9 +133,9 @@ The project folders are as follows:
 </p>
 
 <p>
-In this project, there are 3 main pages which are Login, AdminPage and UserPage. 
-In AdminPage, there are 7 partial pages which are ListApartment, ListResident, ListInvoicesDues, ListMessages, AddUpdateApartment, AddUpdateResidents and AddInvoicesDues. 
-In UserPage, there are 5 partial pages which are Profile, ListInvoicesDues, ListMessages, PayInvoicesDues and SendMessages.
+In this project, there are 3 main pages which are Login, AdminPage and UserPage. <br/>
+In AdminPage, there are 7 partial pages which are ListApartment, ListResident, ListInvoicesDues, ListMessages, AddUpdateApartment, AddUpdateResidents and AddInvoicesDues. <br/>
+In UserPage, there are 5 partial pages which are Profile, ListInvoicesDues, ListMessages, PayInvoicesDues and SendMessages. <br/>
 </p>
   
 ## LoginPage
@@ -232,7 +241,7 @@ User's messages are filtered and displayed.
 
 - PayInvoiceDue
 <p>
-User can select the debt which is not paid and user can select a credit card which is saved before.
+User can select the debt which is not paid and user can select a credit card which is saved before.<br/>
 Or user can paid debt by adding new credit card.
 </p>
 <p align="center">
