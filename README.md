@@ -4,7 +4,7 @@ Akbank FullStack Bootcamp Graduation Project - Site Management System (SiteMS)
 # Table of Contents
 
 1. [Project Explanation](#Project-Explanation)
-3. [Used technologies](#Used-technologies:)
+3. [Used technologies](#Used-technologies)
 4. [Database](#Database)
 5. [Backend](#Backend)
 6. [Frontend](#Frontend)
@@ -72,18 +72,20 @@ I used 4 tables in SQL database and 1 collection in mongodb. The tables in MS SQ
 
 All tables:
 <p align="center">
-  <img src="./Screenshots/SiteManagementDatabase.PNG" />
+  <img src="./Screenshots/SiteManagementDatabase.PNG" width="500px" />
 </p>
 
 Tables and columns:
-<p align="center">
-  <img align="left" src="./Screenshots/ApartmentTable.PNG" />
-   <img align="right" src="./Screenshots/ResidentTable.PNG" />
-  <img align="left" src="./Screenshots/InvoiceDuesTable.PNG" />
-   <img align="right" src="./Screenshots/MessageTable.PNG" />
+
+<p float="left" align="center">
+  <img src="./Screenshots/ApartmentTable.PNG"/>
+  <img src="./Screenshots/ResidentTable.PNG"/> 
 </p>
 
-<br/>
+<p float="left" align="center">
+  <img src="./Screenshots/InvoiceDuesTable.PNG"/>
+  <img src="./Screenshots/MessageTable.PNG"/> 
+</p>
 
 <p>
 The CreditCard collection in mongodb is as follows: <br/>
@@ -91,7 +93,7 @@ residentId is related with the id of the ResidentTable.
 </p>
  
 <p align="center">
-  <img src="./Screenshots/CreditCardClass.PNG" />
+  <img src="./Screenshots/CreditCardClass.PNG" width="400px" />
 </p>
 
 ## Backend
@@ -101,19 +103,19 @@ Two different webAPI was written. One is for MS SQL database, other is for mongo
 ### MSSQL Database .NET Web API Project Folders
 
 <p align="center">
-  <img src="./Screenshots/SiteManagementAPI.PNG" />
+  <img src="./Screenshots/SiteManagementAPI.PNG" width="400px" />
 </p>
 
 APIs that is used:
 
 <p align="center">
-  <img src="./Screenshots/APIs.PNG" />
+  <img src="./Screenshots/APIs.PNG" width="1000px" />
 </p>
 
 ### Mongodb Database .NET Web API Project Folders
 
 <p align="center">
-  <img src="./Screenshots/CreditCardAPI.PNG" />
+  <img src="./Screenshots/CreditCardAPI.PNG" width="500px" />
 </p>
 
 <p>
@@ -122,7 +124,7 @@ I used 2 APIs: Get Credit Cards and Post
 </p>
 
 <p align="center">
-  <img src="./Screenshots/MongoDB_APIs.PNG" />
+  <img src="./Screenshots/MongoDB_APIs.PNG" width="500px"/>
 </p>
 
 ## Frontend
