@@ -4,12 +4,12 @@ Akbank FullStack Bootcamp Graduation Project - Site Management System (SiteMS)
 # Table of Contents
 
 1. [Project Explanation](#Project-Explanation)
-3. [Used technologies](#Used-technologies)
-4. [Database](#Database)
-5. [Backend](#Backend)
-6. [Frontend](#Frontend)
+2. [Used technologies](#Used-technologies)
+3. [Database](#Database)
+4. [Backend](#Backend)
+5. [Frontend](#Frontend)
 
-## Project Explanation
+## 1. Project Explanation
 You are an administrator on a site. You will manage the dues and common use electricity, water and natural gas bills of the apartments on your site through a system.
 You have two types of users.
 
@@ -57,7 +57,7 @@ In this service, payment is made by checking the bank information (credit card n
 Payment can only be made by credit card.
 </p>
 
-## Used technologies:
+## 2. Used technologies:
 - C#
 - ASP .NET CORE Web Api
 - ASP .NET CORE MVC
@@ -67,7 +67,7 @@ Payment can only be made by credit card.
 - Microsoft SQL Server Management Studio
 - React.js
 
-## Database
+## 3. Database
 I used 4 tables in SQL database and 1 collection in mongodb. The tables in MS SQL are as follows:
 
 All tables:
@@ -96,7 +96,7 @@ residentId is related with the id of the ResidentTable.
   <img src="./Screenshots/CreditCardClass.PNG" width="400px" />
 </p>
 
-## Backend
+## 4. Backend
 Two different webAPI was written. One is for MS SQL database, other is for mongodb. 
 
 
@@ -127,7 +127,7 @@ I used 2 APIs: Get Credit Cards and Post
   <img src="./Screenshots/MongoDB_APIs.PNG" width="600px"/>
 </p>
 
-## Frontend
+## 5. Frontend
 The project folders are as follows:
 
 <p align="center">
