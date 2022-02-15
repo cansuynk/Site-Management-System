@@ -119,12 +119,12 @@ APIs that is used:
 </p>
 
 <p>
-APIs that is used: <br/>
+APIs that are used: <br/>
 I used 2 APIs: Get Credit Cards and Post
 </p>
 
 <p align="center">
-  <img src="./Screenshots/MongoDB_APIs.PNG" width="500px"/>
+  <img src="./Screenshots/MongoDB_APIs.PNG" width="600px"/>
 </p>
 
 ## Frontend
