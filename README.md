@@ -129,6 +129,21 @@ I used 2 APIs: Get Credit Cards and Post
 </p>
 
 ## 5. Frontend
+Please change the following variables values in index.js file according to visit pages.
+
+```javascript
+let login = false; //make true to open login page
+let admin = true; //make login = false, admin = true (to open adminPage)
+//make login = false, admin = false (to open userPage)
+
+ReactDOM.render(
+  <React.StrictMode>
+    {login? <Login/>:admin? <AdminPage /> : <UserPage email={"cansuyanik@test.com"}/>}
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
 The project folders are as follows:
 
 <p align="center">
