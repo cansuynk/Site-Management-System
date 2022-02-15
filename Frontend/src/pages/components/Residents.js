@@ -2,6 +2,8 @@ import '../css/apartment.css'
 
 function Residents(props) {
 
+  //Component is for each resident card
+
   function handleClick(e, param) {
     e.preventDefault();
     props.parentCallback(param);

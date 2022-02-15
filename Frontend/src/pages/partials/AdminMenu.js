@@ -2,11 +2,13 @@ import '../css/adminPage.css';
 import React, { useState } from 'react';
 
 function AdminMenu(props) {
+
+    //Left Side Admin Menu Items
   
-  function handleClick(e, param) {
-    e.preventDefault();
-    props.parentCallback(param);
-  }
+    function handleClick(e, param) {
+        e.preventDefault();
+        props.parentCallback(param);
+    }
 
     return (
       

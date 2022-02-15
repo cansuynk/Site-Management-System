@@ -3,6 +3,8 @@ import axios from 'axios';
 
 function Apartments(props) {
 
+  //Component is for each apartment card
+
   function handleClick(e, param) {
     e.preventDefault();
     props.parentCallback(param);

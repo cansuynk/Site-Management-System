@@ -4,6 +4,8 @@
 function Profile(probs) {
   
     let user = probs.userObject;
+
+    //user info is displayed
     
     return (
 

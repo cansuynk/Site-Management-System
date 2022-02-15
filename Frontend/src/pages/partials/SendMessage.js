@@ -11,10 +11,11 @@ function SendMessage(props) {
 
     function handleSubmit(e){
 
+        //find date with specific format
         var myDate = new Date();
         myDate = myDate.getFullYear() + '-' +('0' + (myDate.getMonth()+1)).slice(-2)+ '-' +  ('0' + myDate.getDate()).slice(-2) + ' '+myDate.getHours()+ ':'+('0' + (myDate.getMinutes())).slice(-2)+ ':'+myDate.getSeconds();
         console.log(message.target.value);
-        if(message){
+        if(message){ //if message filled, add
                 
             axios.post('https://localhost:7214/SiteManagement/AddMessage', {
                 residentId: user.id,

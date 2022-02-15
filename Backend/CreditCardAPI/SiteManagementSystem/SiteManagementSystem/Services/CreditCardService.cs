@@ -4,6 +4,7 @@ using MongoDB.Driver;
 
 namespace SiteManagementSystem.Services
 {
+    //CRUD methods & mongodb functions
     public class CreditCardService
     {
         private readonly IMongoCollection<CreditCard> _creditCardsCollection;

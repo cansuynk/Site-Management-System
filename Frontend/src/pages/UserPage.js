@@ -50,6 +50,7 @@ useEffect(() => {
 
 });
 
+//Function are used for fetch data from database
 const getApartments = () => {
     axios.get('https://localhost:7214/SiteManagement/GetApartments').then(function (response) {
         // handle success

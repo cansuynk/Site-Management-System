@@ -6,11 +6,10 @@ const blocks = ["A", "B", "C", "D","E", "F", "G", "H", "I", "J", "K", "L", "M"];
 
 function AddUpdateResident(props) {
 
-    //if existing resident(check name: change)
-    //else cretae password
 
     let residentList = props.residentList;
 
+    //Resident information, form information
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [block, setBlock] = useState("");
@@ -20,6 +19,8 @@ function AddUpdateResident(props) {
     const [phone, setPhone] = useState("");
     const [numberPlate, setNumberPlate] = useState("");
 
+
+    //function is used to generate password for newly added resident
     function generatePassword() {
         var length = 8,
             charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
@@ -30,12 +31,15 @@ function AddUpdateResident(props) {
         return retVal;
     }
 
+    //form submit function
     function handleSubmit(e){
 
+        //if all fields are filled
         if(name && surname && block && no && tcNo && email && phone && numberPlate){
 
-            let tcNoV = String(tcNo.target.value);
+            let tcNoV = String(tcNo.target.value); 
 
+            //try to find resident by looking tcNo, if already exist, change existed resident info
             if(residentList.find(({ tcNo }) => tcNo === tcNoV)){
                 let resident = residentList.find(({ tcNo }) => tcNo === tcNoV);
                 console.log(resident.id);
@@ -66,7 +70,7 @@ function AddUpdateResident(props) {
                 });
             }
             else{
-                
+                //if there is no existed residet, add
                 axios.post('https://localhost:7214/SiteManagement/AddResident', {
                     name: name.target.value,
                     surname: surname.target.value,

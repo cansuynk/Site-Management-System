@@ -2,6 +2,7 @@
 {
     public class CreditCardDatabaseSettings
     {
+        //db configurations class
         public string ConnectionString { get; set; } = null!;
 
         public string DatabaseName { get; set; } = null!;

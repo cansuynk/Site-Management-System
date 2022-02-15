@@ -1,52 +1,4 @@
 import React, { useState, useEffect } from 'react';
-/*
-let exampleList = [
-    {
-        //apartmentId verildi (resident, block, apartment no yerine)
-        //det int
-        resident: "Cansu Yanık",
-        block: "A",
-        apartmentNo: "59",
-        debtType: "electric",
-        debt: "100",
-        month: 2,
-        year: 2022,
-        status: 0     
-    },
-    {
-        resident: "Emre Özkan",
-        block: "A",
-        apartmentNo: "29",
-        debtType: "due",
-        debt: "200",
-        month: 2,
-        year: 2022,
-        status: 1   
-    },
-    {
-        resident: "Cansu Yanık",
-        block: "A",
-        apartmentNo: "59",
-        debtType: "electric",
-        debt: "100",
-        month: 3,
-        year: 2021,
-        status: 0  
-    },
-    {
-        resident: "Cansu Yanık",
-        block: "A",
-        apartmentNo: "59",
-        debtType: "electric",
-        debt: "100",
-        month: 2,
-        year: 2021,
-        status: 1   
-    }
-];
-*/
-
-
 
 
 function ListInvoicesDues(props) {
@@ -63,6 +15,8 @@ function ListInvoicesDues(props) {
     
     let user = props.userObject;
 
+
+    //find apartment of the user
     function filterUser(u){
         let apartment = apartmentList.find( ({ id }) => id === u.apartmentId );
         if(apartment.resident === user.name + " " + user.surname)

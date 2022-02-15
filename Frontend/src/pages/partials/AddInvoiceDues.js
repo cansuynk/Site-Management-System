@@ -1,46 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-/*
-const exampleList = [
-    {
-        block: "A",
-        status: "full",
-        type: "2+1",
-        floor: "7",
-        apartmentNo: "59",
-        ownerOrTenant: "tenant",
-        resident: "Cansu Yanık"
-    },
-    {
-        block: "A",
-        status: "full",
-        type: "1+1",
-        floor: "3",
-        apartmentNo: "29",
-        ownerOrTenant: "tenant",
-        resident: "Emre Özkan"
-    },
-    {
-        block: "B",
-        status: "empty",
-        type: "1+1",
-        floor: "3",
-        apartmentNo: "29",
-        ownerOrTenant: "-",
-        resident: "-"
-    },
-    {
-        block: "B",
-        status: "empty",
-        type: "1+1",
-        floor: "3",
-        apartmentNo: "29",
-        ownerOrTenant: "-",
-        resident: "-"
-    }
-];
-*/
+
 const months = ["January", "February", "March", "April", "May", "Jun", "July", "August", "September", "October", "November", "December"];
 const years = [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000];
 const depthTypes = ["Dues", "Electric", "Hot Water", "Gas", "Other"];
@@ -50,6 +11,7 @@ function AddInvoiceDue(props) {
 
     let newList = props.apartmentList.filter( (a) => a.resident!=="-");
 
+    //form area info
     const [value1, setValue1] = useState(newList[0].resident);
     const [value2, setValue2] = useState("electric");
     const [value3, setValue3] = useState("January");
@@ -57,6 +19,7 @@ function AddInvoiceDue(props) {
     const [value5, setValue5] = useState("");
 
 
+    //function called after from submitted, add new invoice/dues info to db
     function handleSubmit(e){
         e.preventDefault();
 

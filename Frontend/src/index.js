@@ -7,11 +7,13 @@ import Login from './pages/Login';
 import AdminPage from './pages/AdminPage';
 import UserPage from './pages/UserPage';
 
+let login = false; //make true to open login page
+let admin = true; //make login = false, admin = true (to open adminPage)
+//make login = false, admin = false (to open userPage)
 
-let open = true;
 ReactDOM.render(
   <React.StrictMode>
-    {!open? <AdminPage /> : <UserPage email={"emreozkan@test.com"}/>}
+    {login? <Login/>:admin? <AdminPage /> : <UserPage email={"cansuyanik@test.com"}/>}
   </React.StrictMode>,
   document.getElementById('root')
 );

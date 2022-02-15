@@ -4,6 +4,7 @@ import { faHomeLg, faHomeUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Login() {
+    //Login page
   return (
     <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">

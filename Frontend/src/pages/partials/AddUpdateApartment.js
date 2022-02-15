@@ -10,6 +10,7 @@ function AddUpdateApartment(props) {
 
     let apartmentList = props.apartmentList;
 
+    //form info, Apartment Information
     const [block, setBlock] = useState("");
     const [type, setType] = useState("");
     const [floorr, setFloor] = useState(0);
@@ -18,11 +19,12 @@ function AddUpdateApartment(props) {
     const [tO, setTO1] = useState("");
     const [resident, setResident] = useState("");
 
-
+    //function is called afte submit forum
     function handleSubmit(e){
 
         console.log(resident);
 
+        //if all areas are filled
         if(block && type && floorr && no && status){
 
             let ten = '-';
@@ -37,6 +39,7 @@ function AddUpdateApartment(props) {
             let blockV = String(block.target.value);
             let noV = parseInt(no.target.value);
 
+            //if apartment is alreadt exist, change it using PUT method
             if(apartmentList.find(({ block, apartmentNo }) => block === blockV && apartmentNo === noV)){
                 let apartment = apartmentList.find(({ block, apartmentNo }) => block === blockV && apartmentNo === noV);
                 console.log(apartment.id);
@@ -65,7 +68,7 @@ function AddUpdateApartment(props) {
                 });
             }
             else{
-                
+                //if not exist, add
                 axios.post('https://localhost:7214/SiteManagement/AddApartment', {
                     block: block.target.value,
                     status: status.target.value,

@@ -2,11 +2,13 @@ import '../css/userPage.css';
 import React, { useState } from 'react';
 
 function UserMenu(props) {
+
+    //Left Side User Menu Items
   
-  function handleClick(e, param) {
-    e.preventDefault();
-    props.parentCallback(param);
-  }
+    function handleClick(e, param) {
+        e.preventDefault();
+        props.parentCallback(param);
+    }
 
     return (
         <div class="sb-sidenav-menu">

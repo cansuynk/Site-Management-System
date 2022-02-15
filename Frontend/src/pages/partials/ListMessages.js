@@ -2,55 +2,18 @@ import '../css/adminPage.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 
-/*
-let exampleList = [
-    {
-        //resident id verildi, (resident, block, apartmentno yerine)
-        id: 1,
-        resident: "Cansu Yanık",
-        block: "A",
-        apartmentNo: "59",
-        message: "We want to a swimming pool",
-        status: 0,
-        time: "11.11.11 11.11"
-
-    },
-    {
-        id: 2,
-        resident: "Cansu Yanık",
-        block: "A",
-        apartmentNo: "59",
-        message: "svsfbdzfbgfnfgnfgnfgng",
-        status: 1,
-        time: "11.11.11 11.11"
-    },
-    {
-        id: 3,
-        resident: "Emre Özkan",
-        block: "A",
-        apartmentNo: "59",
-        message: "We want to a swimming poolWe want to a swimming poolWe want to a swimming poolWe want to a swimming poolWe want to a swimming pool",
-        status: 0,
-        time: "11.11.11 11.11"
-    }
-];
-*/
 
 //exampleList = exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
 
 
 function ListMessages(props) {
 
-    function makeList(exampleList){
-        return exampleList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
-    }
-
-    let exampleList = makeList(props.messageList);
+    let exampleList = props.messageList.sort((a, b) => a.status - b.status); //unread messages going top
 
     let residentList = props.residentList;
-
     let user = props.userObject;
 
+    //filter only current user's messages
     function filterUser(u){
         if(user.id === u.residentId){
             u.status = 1;
@@ -62,20 +25,22 @@ function ListMessages(props) {
         exampleList = exampleList.filter(filterUser);
     }
     
-    
 
     const [list, setList] = useState(exampleList);
     const [openM, setOpenM] = useState(true);
     const [currObject, setcurrObject] = useState({});
 
+    //function is used to open selected message content
     function openHandler(e,index){
         let newList = list;
         
         setcurrObject(newList[index]);
 
-        newList[index].status = 1;
+        newList[index].status = 1; //make status as read
 
         console.log(newList[index].message);
+
+        //again sort (unread ones going top)
         newList = newList.sort((a, b) => parseFloat(a.status) - parseFloat(b.status));
 
         setList(newList);
@@ -83,6 +48,7 @@ function ListMessages(props) {
         setOpenM(false);
         console.log(list);
 
+        //change status as read.
         axios({
             method: 'PUT',
             url: 'https://localhost:7214/SiteManagement/UpdateMessage', 

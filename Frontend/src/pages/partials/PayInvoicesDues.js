@@ -2,96 +2,16 @@ import '../css/userPage.css';
 import creditCards from '../../images/creditCards.png';
 import axios from 'axios';
 import React, { useState } from 'react';
-/*
-let exampleList = [
-    {
-        resident: "Cansu Yanık",
-        residentId:1,
-        block: "A",
-        apartmentNo: "59",
-        debtType: "electric",
-        debt: "100",
-        month: 2,
-        year: 2022,
-        status: 0     
-    },
-    {
-        resident: "Emre Özkan",
-        residentId:2,
-        block: "A",
-        apartmentNo: "29",
-        debtType: "due",
-        debt: "200",
-        month: 2,
-        year: 2022,
-        status: 1   
-    },
-    {
-        resident: "Cansu Yanık",
-        residentId:1,
-        block: "A",
-        apartmentNo: "59",
-        debtType: "electric",
-        debt: "100",
-        month: 3,
-        year: 2021,
-        status: 0  
-    },
-    {
-        resident: "Cansu Yanık",
-        residentId:1,
-        block: "A",
-        apartmentNo: "59",
-        debtType: "electric",
-        debt: "100",
-        month: 2,
-        year: 2021,
-        status: 1   
-    }
-];
-*/
-/*
-let creditCardList = [
-    {
-        resident: "Cansu Yanık",
-        residentId: 1,
-        type: "Visa",
-        number: "111111111111111",
-        month: 2,
-        year: 2023,
-    },
-    {
-        resident: "Cansu Yanık",
-        residentId: 1,
-        type: "Maximum",
-        number: "111111111111111",
-        month: 2,
-        year: 2023,
-    },
-    {
-        resident: "Emre Özkan",
-        residentId: 2,
-        type: "Visa",
-        number: "111111111111111",
-        month: 2,
-        year: 2023
-    },
-    {
-        resident: "Emre Özkan",
-        residentId: 2,
-        type: "Visa",
-        number: "111111111111111",
-        month: 2,
-        year: 2023  
-    }
-];*/
 
+
+//create month and year array
 const months = Array.from({length: 12}, (_, i) => i + 1);
 const years = Array.from({length: 10}, (_, i) => i + 2022);
 const cardTypes = ["PayPal", "Visa", "Maximum", "MasterCard"];
 
 function PayInvoicesDues(props) {
 
+    //form info, creaditCard Information
     const [depth, setDepth] = useState("");
     const [card, setCard] = useState("");
     const [type, setType] = useState("");
@@ -107,17 +27,17 @@ function PayInvoicesDues(props) {
     let user = props.userObject;
 
     function filterUser(u){
-
+        //filter only current user's credit cards
         let apartment = apartmentList.find( ({ id }) => id === u.apartmentId);
         if((apartment.resident === user.name + " " + user.surname) && u.status === false){
             return u;
         }
     }
 
-    //id ile filtreleme
+    //find user in residentList
     function filterCard(u){
         if(u.residentId === user.id){
-            u.number = u.number.slice(0,-5) + "XXXXX"; 
+            u.number = u.number.slice(0,-5) + "XXXXX"; //hide creditcard last 5 number
             return u;
         }
             
@@ -129,19 +49,22 @@ function PayInvoicesDues(props) {
         creditCardList = creditCardList.filter(filterCard);
     }
 
+    //function is used after form is submitted
     function handleSubmit(e){
         e.preventDefault();
 
+        //if debt and card area is filded
         if(depth && card){
             let dept = depth.target.value;
-
+            
+            //take id of debt
             dept = parseInt(dept.substring( dept.indexOf("(") + 1, dept.lastIndexOf(")")));
             
-
+            //find debt from list
             let deptObj = exampleList.find( ({ id }) => id === dept);
             console.log(deptObj);
             
-
+            //make it paid
             axios({
                 method: 'PUT',
                 url: 'https://localhost:7214/SiteManagement/UpdateInvoiceDues', 
@@ -165,12 +88,13 @@ function PayInvoicesDues(props) {
             });
 
         }
+        //if new credit card areas are flled
         else if (depth && number && type && securityNum && month && year){
             let dept = depth.target.value;
 
             dept = parseInt(dept.substring( dept.indexOf("(") + 1, dept.lastIndexOf(")")));
             
-            
+            //add new credit card to db and make paid the selected debt
             let deptObj = exampleList.find( ({ id }) => id === dept);
             axios.post('https://localhost:7039/CreditCards', {
                 residentId: user.id,

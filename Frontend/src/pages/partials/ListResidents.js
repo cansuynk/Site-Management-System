@@ -1,83 +1,14 @@
 import Residents from '../components/Residents';
 import '../css/adminPage.css';
 import axios from 'axios';
-/*
-const exampleList = [
-    {
-        name: "Cansu",
-        surname: "Yanık",
-        block: "A",
-        apartmentNo:"59",
-        tcNo: "1111111111111",
-        email: "cansuyanik96@gmail.com",
-        password: "xxxxxxxx",
-        phone: "05303003656",
-        numberPlate: "06-CIY-680"
-    },
-    {
-        name: "Emre Burak",
-        surname: "Özkan",
-        block: "A",
-        apartmentNo:"59",
-        tcNo: "1111111111111",
-        email: "emreburakozkan@gmail.com",
-        password: "xxxxxxxx",
-        phone: "05416319137",
-        numberPlate: "06-AEF-232"
-    },
-    {
-        name: "Cansu",
-        surname: "Yanık",
-        block: "A",
-        apartmentNo:"59",
-        tcNo: "1111111111111",
-        email: "cansuyanik96@gmail.com",
-        password: "xxxxxxxx",
-        phone: "05303003656",
-        numberPlate: "06-CIY-680"
-    },
-    {
-        name: "Emre Burak",
-        surname: "Özkan",
-        block: "A",
-        apartmentNo:"59",
-        tcNo: "1111111111111",
-        email: "emreburakozkan@gmail.com",
-        password: "xxxxxxxx",
-        phone: "05416319137",
-        numberPlate: "06-AEF-232"
-    },
-    {
-        name: "Emre Burak",
-        surname: "Özkan",
-        block: "A",
-        apartmentNo:"59",
-        tcNo: "1111111111111",
-        email: "emreburakozkan@gmail.com",
-        password: "xxxxxxxx",
-        phone: "05416319137",
-        numberPlate: "06-AEF-232"
-    },
-    {
-        name: "Emre Burak",
-        surname: "Özkan",
-        block: "A",
-        apartmentNo:"59",
-        tcNo: "1111111111111",
-        email: "emreburakozkan@gmail.com",
-        password: "xxxxxxxx",
-        phone: "05416319137",
-        numberPlate: "06-AEF-232"
-    }
-];
-*/
 
 
 
 function ListResidents(props) {
 
+    //This is callback function. If delete button is clicked, selected resident is deleted.
     let callbackFunction = (childData) => {
-        console.log(`https://localhost:7214/SiteManagement/DeleteResident/${childData}`);
+        //console.log(`https://localhost:7214/SiteManagement/DeleteResident/${childData}`);
         axios.delete('https://localhost:7214/SiteManagement/DeleteResident', { params: { id: childData } })
         .then(function (response) {
             console.log(response);
@@ -89,6 +20,8 @@ function ListResidents(props) {
         });
     };
 
+    //This function displays resident 4 by 4. This is just for layout. If there is no 4 resident, displays 3 residents.
+    //Each resident is displayed in Residents Component.
     function makeList(exampleList){
         let residents = [];
         let i=0;
