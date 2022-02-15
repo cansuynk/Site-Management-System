@@ -44,9 +44,11 @@ You have two types of users.
 3.	Assigns users to apartments.
 4.	Enters monthly dues information.
 5.	Enters billing information monthly
+<p>
 Apart from the interface, a separate service will be written for users to pay by credit card. Data for credit card service will be kept in mongodb. The service will be written as .Net WebApi.
 In this service, payment is made by checking the bank information (credit card number, etc.) for each user in the system.
 Payment can only be made by credit card.
+</p>
 
 ## Used technologies:
 - C#
@@ -74,8 +76,10 @@ Tables and columns:
    <img align="right" src="./Screenshots/MessageTable.PNG" />
 </p>
 
+<p>
 The CreditCard collection in mongodb is as follows: 
 residentId is related with the id of the ResidentTable.
+</p>
  
 <p align="center">
   <img src="./Screenshots/CreditCardClass.PNG" />
@@ -103,8 +107,10 @@ APIs that is used:
   <img src="./Screenshots/CreditCardAPI.PNG" />
 </p>
 
+<p>
 APIs that is used: 
 I used 2 APIs: Get Credit Cards and Post
+</p>
 
 <p align="center">
   <img src="./Screenshots/MongoDB_APIs.PNG" />
@@ -117,10 +123,12 @@ The project folders are as follows:
   <img src="./Screenshots/ProjectFolders.PNG" />
 </p>
 
+<p>
 In this project, there are 3 main pages which are Login, AdminPage and UserPage. 
 In AdminPage, there are 7 partial pages which are ListApartment, ListResident, ListInvoicesDues, ListMessages, AddUpdateApartment, AddUpdateResidents and AddInvoicesDues. 
 In UserPage, there are 5 partial pages which are Profile, ListInvoicesDues, ListMessages, PayInvoicesDues and SendMessages.
-
+</p>
+  
 ## LoginPage
 
 <p align="center">
@@ -172,6 +180,7 @@ New apartment can be added or existing apartment can be updated (according to bl
   <img src="./Screenshots/AdminPage/AddApartment.PNG" />
 </p>
 
+After adding:
 <p align="center">
   <img src="./Screenshots/AdminPage/ApartmentAdded.PNG" />
 </p>
@@ -194,7 +203,51 @@ Existing apartments are listed and can be selected.
   <img src="./Screenshots/AdminPage/DeleteResident.PNG" />
 </p>
 
+After deletion:
+
 <p align="center">
   <img src="./Screenshots/AdminPage/AfterDeletion.PNG" />
 </p>
+
+## User Pages
+Partial pages are as follows:
+
+- Profile
+User profile (values are dummy)
+<p align="center">
+  <img src="./Screenshots/UserPage/UserProfile.PNG" />
+</p>
+
+- ListInvoicesDues
+User's invoices and dues are filtered and displayed. Paid/not paid information can be seen.
+<p align="center">
+  <img src="./Screenshots/UserPage/InvoicesDues.PNG" />
+</p>
+
+- MessageList
+User's messages are filtered and displayed.
+<p align="center">
+  <img src="./Screenshots/UserPage/Messages.PNG" />
+</p>
+
+- PayInvoiceDue
+<p>
+User can select the debt which is not paid and user can select a credit card which is saved before.
+Or user can paid debt by adding new credit card.
+</p>
+<p align="center">
+  <img src="./Screenshots/UserPage/PayInvoiceDue.PNG" />
+</p>
+
+- SendMessage
+
+<p align="center">
+  <img src="./Screenshots/UserPage/SendMessage.PNG" />
+</p>
+
+After sending new message:
+<p align="center">
+  <img src="./Screenshots/UserPage/MessagesAfterAdd.PNG" />
+</p>
+
 
